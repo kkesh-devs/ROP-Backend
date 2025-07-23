@@ -1,0 +1,39 @@
+﻿namespace KKESH_ROP.DTO.Screener;
+
+public class CreateScreenerDto
+{
+    public string FirstName { get; set; }
+    public string MiddleName { get; set; }
+    public string LastName { get; set; }
+    public string Mobile { get; set; }
+    public string Country { get; set; }
+    public string City { get; set; }
+    public string HospitalId { get; set; }
+    public string UserId { get; set; }
+
+}
+
+public class UpdateScreenerDto
+{
+    public string FirstName { get; set; }
+    public string MiddleName { get; set; }
+    public string LastName { get; set; }
+    public string Mobile { get; set; }
+    public string Country { get; set; }
+    public string City { get; set; }
+    public string HospitalId { get; set; }
+}
+
+public class ScreenerDto
+{
+    public string Id { get; set; } // ObjectId string
+    public string FirstName { get; set; }
+    public string MiddleName { get; set; }
+    public string LastName { get; set; }
+    public string Mobile { get; set; }
+    public string Country { get; set; }
+    public string City { get; set; }
+    public string HospitalId { get; set; }
+    public string UserId { get; set; }
+
+}

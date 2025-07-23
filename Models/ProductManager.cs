@@ -1,0 +1,34 @@
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace KKESH_ROP.Models;
+
+public class ProductManager
+{
+    [BsonId]
+    public ObjectId _id { get; set; }
+
+    [BsonElement("firstName")]
+    public string FirstName { get; set; }
+    
+    [BsonElement("middleName")]
+    public string MiddleName { get; set; }
+    
+    [BsonElement("lastName")]
+    public string LastName { get; set; }
+
+    [BsonElement("mobile")]
+    public string Mobile { get; set; }
+    
+    [BsonElement("country")]
+    public string Country { get; set; }
+    
+    [BsonElement("city")]
+    public string City { get; set; }
+    
+    [BsonElement("hospitalId")]
+    public string HospitalId { get; set; }
+    
+    [BsonElement("userId")]
+    public string UserId { get; set; }
+}
