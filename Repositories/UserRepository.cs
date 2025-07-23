@@ -55,6 +55,13 @@ public class UserRepository(ApplicationDbContext context, TokenHelper tokenHelpe
     {
         try
         {
+            var existedUser = await context.Users.FirstOrDefaultAsync(x => x.Email == dto.Email);
+
+            if (existedUser != null)
+            {
+                return new Response<UserDto>(false, "Email address already exists", null);
+            }
+            
             var user = mapper.Map<User>(dto);
             
             user.Password = BCrypt.Net.BCrypt.HashPassword(dto.Password);

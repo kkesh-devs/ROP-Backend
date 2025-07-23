@@ -36,7 +36,7 @@ public class UserController(IUserRepository userRepository) : ControllerBase
             return BadRequest(new Response<string>(false, "Invalid model", null));
 
         var response = await userRepository.CreateAsync(dto);
-        return CreatedAtAction(nameof(GetById), new { id = response.Data.Id }, response);
+        return Ok(response);
     }
 //____________________________________________________________________________________________________________________________________________________
 
