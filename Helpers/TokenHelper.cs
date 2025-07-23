@@ -14,7 +14,7 @@ public class TokenHelper(IConfiguration config)
         {
             new("_id", user._id),
             new("Email", user.Email),
-            new(ClaimTypes.Role, user.Role),
+            new("Role", user.Role),
         };
 
         var jwtKey = config["Jwt:Key"] 
