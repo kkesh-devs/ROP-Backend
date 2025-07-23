@@ -51,6 +51,36 @@ public class UserRepository(ApplicationDbContext context, TokenHelper tokenHelpe
     }
 //____________________________________________________________________________________________________________________________________________________
 
+    public async Task<Response<UserDto>> Register(RegisterUserDto dto)
+    {
+        try
+        {
+            var existedUser = await context.Users.FirstOrDefaultAsync(x => x.Email == dto.Email);
+
+            if (existedUser != null)
+            {
+                return new Response<UserDto>(false, "Email address already exists", null);
+            }
+            
+            var user = mapper.Map<User>(dto);
+            
+            user.Password = BCrypt.Net.BCrypt.HashPassword(dto.Password);
+            user.Status = UserStatusEnum.Active;
+            user.CreatedBy = "user";
+
+            await context.Users.AddAsync(user);
+            await context.SaveChangesAsync();
+
+            var result = mapper.Map<UserDto>(user);
+            return new Response<UserDto>(true, "User created successfully", result);
+        }
+        catch (Exception exception)
+        {
+            return new Response<UserDto>(false, "Error " + exception.Message, null);
+        }
+    }
+//____________________________________________________________________________________________________________________________________________________
+
     public async Task<Response<UserDto>> CreateAsync(CreateUserDto dto)
     {
         try
@@ -140,6 +170,7 @@ public class UserRepository(ApplicationDbContext context, TokenHelper tokenHelpe
             
             if (!BCrypt.Net.BCrypt.Verify(dto.Password, user.Password))
                 return new Response<string>(false, "Invalid email or password", null);
+            
 
             switch (user.Status)
             {
@@ -152,7 +183,8 @@ public class UserRepository(ApplicationDbContext context, TokenHelper tokenHelpe
                 case UserStatusEnum.Deleted:
                     return new Response<string>(false, "User account has been deleted", null);
                 case UserStatusEnum.Active:
-
+                    
+                    
                     var tokenDto = new TokenDto
                     {
                         _id = user._id.ToString(),
@@ -174,4 +206,5 @@ public class UserRepository(ApplicationDbContext context, TokenHelper tokenHelpe
         }
     }
 //____________________________________________________________________________________________________________________________________________________
+
 }

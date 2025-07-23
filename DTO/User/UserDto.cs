@@ -3,11 +3,16 @@ using KKESH_ROP.Models;
 
 namespace KKESH_ROP.DTO.User;
 
-public class CreateUserDto
+public class RegisterUserDto
 {
     public string Email { get; set; }
     public string Password { get; set; }
     public UserRoleEnum Role { get; set; }
+}
+
+
+public class CreateUserDto : RegisterUserDto
+{
     public string CreatedBy { get; set; }
 }
 

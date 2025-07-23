@@ -40,6 +40,17 @@ public class UserController(IUserRepository userRepository) : ControllerBase
     }
 //____________________________________________________________________________________________________________________________________________________
 
+    [HttpPost("Register")]
+    public async Task<IActionResult> Register([FromBody] RegisterUserDto dto)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(new Response<string>(false, "Invalid model", null));
+
+        var response = await userRepository.Register(dto);
+        return Ok(response);
+    }
+//____________________________________________________________________________________________________________________________________________________
+
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(string id, [FromBody] UpdateUserDto dto)
     {
