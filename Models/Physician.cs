@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using KKESH_ROP.Enums;
 
 namespace KKESH_ROP.Models;
 
@@ -26,9 +27,12 @@ public class Physician
     [BsonElement("city")]
     public string City { get; set; }
     
-    [BsonElement("hospitalId")]
-    public string HospitalId { get; set; }
+    [BsonElement("hospitalName")]
+    public string HospitalName { get; set; }
     
     [BsonElement("userId")]
     public string UserId { get; set; }
+    
+    [BsonElement("status")]
+    public PhysicianStatus Status { get; set; }
 }

@@ -10,7 +10,9 @@ public class PhysicianProfile : Profile
     public PhysicianProfile()
     {
         CreateMap<Physician, PhysicianDto>()
-            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src._id.ToString()));
+            .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src._id.ToString()))
+            .ForMember(dest => dest.HospitalName, opt => opt.MapFrom(src => src.HospitalName))
+            .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status));
 
         CreateMap<CreatePhysicianDto, Physician>()
             .ForMember(dest => dest._id, opt => opt.Ignore());

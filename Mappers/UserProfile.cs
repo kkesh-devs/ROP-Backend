@@ -19,6 +19,14 @@ public class UserProfile : Profile
                 UpdatedAt = DateTime.UtcNow
             }));
 
+        CreateMap<RegisterUserDto, User>()
+            .ForMember(dest => dest._id, opt => opt.Ignore())
+            .ForMember(dest => dest.Timestamp, opt => opt.MapFrom(_ => new Timestamp
+            {
+                CreatedAt = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow
+            }));
+
         CreateMap<UpdateUserDto, User>()
             .AfterMap((src, dest) =>
             {
