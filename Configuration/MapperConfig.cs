@@ -6,7 +6,7 @@ public static class MapperConfig
 {
     public static void AddMappers(this IServiceCollection services)
     {
-        
+
         services.AddAutoMapper(cfg =>
         {
             cfg.AddProfile<PatientProfile>();
@@ -18,6 +18,8 @@ public static class MapperConfig
             cfg.AddProfile<UserProfile>();
             cfg.AddProfile<DiagnoseProfile>();
             cfg.AddProfile<DiagnoseRequestProfile>();
+            cfg.AddProfile<JoinPhysicianProfile>();
+
         });
     }
 }

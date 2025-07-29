@@ -164,7 +164,12 @@ public class PhysicianRepository(IMapper mapper, ApplicationDbContext context) :
         }
     }
 
-//____________________________________________________________________________________________________________________________________________________
+    public Task<Response<bool>> UpdateByUserIdAsync(string userId, UpdatePhysicianDto dto)
+    {
+        throw new NotImplementedException();
+    }
+
+    //____________________________________________________________________________________________________________________________________________________
 
     // public async Task<Response<List<PhysicianDto>>> GetByStatusAsync(string status)
     // {
@@ -176,7 +181,7 @@ public class PhysicianRepository(IMapper mapper, ApplicationDbContext context) :
     //         var physicians = await context.Physicians
     //             .Where(x => x.Status == physicianStatus)
     //             .ToListAsync();
-            
+
     //         var result = mapper.Map<List<PhysicianDto>>(physicians);
     //         return new Response<List<PhysicianDto>>(true, "Data retrieved successfully", result);
     //     }
@@ -186,7 +191,7 @@ public class PhysicianRepository(IMapper mapper, ApplicationDbContext context) :
     //     }
     // }
 
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     // public async Task<Response<PhysicianDto>> ApproveAsync(string id)
     // {
@@ -212,7 +217,7 @@ public class PhysicianRepository(IMapper mapper, ApplicationDbContext context) :
     //     }
     // }
 
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     // public async Task<Response<PhysicianDto>> RejectAsync(string id)
     // {
@@ -238,6 +243,6 @@ public class PhysicianRepository(IMapper mapper, ApplicationDbContext context) :
     //     }
     // }
 
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
 }

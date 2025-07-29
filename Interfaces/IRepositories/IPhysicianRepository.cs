@@ -10,4 +10,5 @@ public interface IPhysicianRepository
     Task<Response<PhysicianDto>> CreateAsync(CreatePhysicianDto dto);
     Task<Response<bool>> UpdateAsync(string id, UpdatePhysicianDto dto);
     Task<Response<PhysicianDto>> GetByUserIdAsync(string userId);
+    Task<Response<bool>> UpdateByUserIdAsync(string userId, UpdatePhysicianDto dto);
 }

@@ -22,6 +22,7 @@ public static class ServicesConfig
         services.AddScoped<ITapPaymentRepository, TapPaymentRepository>();
         services.AddScoped<IDiagnoseRepository, DiagnoseRepository>();
         services.AddScoped<IDiagnoseRequestRepository, DiagnoseRequestRepository>();
+        services.AddScoped<IJoinPhysicianRepository, JoinPhysicianRepository>();
 
         
         //Services
