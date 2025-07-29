@@ -15,7 +15,8 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Screener> Screeners { get; set; }
     public DbSet<Diagnose> Diagnoses { get; set; }
     public DbSet<DiagnoseRequest> DiagnoseRequests { get; set; }
-    
+
+    public DbSet<JoinPhysicianRequests> PhysicianJoinRequests { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -24,11 +25,13 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         builder.Entity<Consultant>().ToCollection("consultants");
         builder.Entity<MedicalCenter>().ToCollection("medicalCenters");
         builder.Entity<Patient>().ToCollection("patients");
-        builder.Entity<Physician>().ToCollection("physicians");
+        builder.Entity<Physician>().ToCollection("Physicians");
         builder.Entity<ProductManager>().ToCollection("productManagers");
         builder.Entity<Screener>().ToCollection("screeners");
         builder.Entity<Diagnose>().ToCollection("diagnoses");
         builder.Entity<DiagnoseRequest>().ToCollection("diagnoseRequests");
-        
+        builder.Entity<JoinPhysicianRequests>().ToCollection("JoinPhysicianRequests");
+
+
     }
 }

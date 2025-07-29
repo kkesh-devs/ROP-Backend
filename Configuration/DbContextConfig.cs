@@ -13,6 +13,11 @@ public static class DbContextConfig
         var mongoUrl = new MongoUrl(connectionString);
         var mongoClient = new MongoClient(mongoUrl);
 
+        // Register MongoDB services
+        services.AddSingleton<IMongoClient>(mongoClient);
+        services.AddSingleton<IMongoDatabase>(provider =>
+            provider.GetService<IMongoClient>().GetDatabase(databaseName));
+
         services.AddDbContext<ApplicationDbContext>(options =>
             options.UseMongoDB(mongoClient, databaseName));
     }

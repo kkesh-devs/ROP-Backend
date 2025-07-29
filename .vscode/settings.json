@@ -1,11 +1,11 @@
 {
     "FSharp.suggestGitignore": false,
     "omnisharp.enableEditorConfigSupport": true,
-    "omnisharp.enableImportCompletion": true,
     "omnisharp.enableRoslynAnalyzers": true,
     "dotnet.defaultSolution": "KKESH_ROP.sln",
     "omnisharp.useModernNet": true,
     "omnisharp.enableMsBuildLoadProjectsOnDemand": false,
     "csharp.debug.console": "internalConsole",
-    "debug.allowBreakpointsEverywhere": true
+    "debug.allowBreakpointsEverywhere": true,
+    "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true
 }

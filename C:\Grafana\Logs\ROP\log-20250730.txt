@@ -1,0 +1,1084 @@
+2025-07-30 01:23:25 [DBG] Connection id "0HNEEIOPQUSBF" accepted.
+2025-07-30 01:23:26 [DBG] Connection id "0HNEEIOPQUSBF" started.
+2025-07-30 01:23:26 [DBG] Connection 0HNEEIOPQUSBF established using the following protocol: "Tls12"
+2025-07-30 01:23:26 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User/login - null null
+2025-07-30 01:23:26 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:23:26 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:23:26 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:23:26 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:23:26 [INF] CORS policy execution successful.
+2025-07-30 01:23:26 [DBG] The request is a preflight request.
+2025-07-30 01:23:26 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User/login - 204 null null 22.9952ms
+2025-07-30 01:23:26 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User/login - application/json 45
+2025-07-30 01:23:26 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:23:26 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)' with route pattern 'api/User/Login' is valid for the request path '/api/User/login'
+2025-07-30 01:23:26 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:23:26 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:23:26 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:23:26 [INF] CORS policy execution successful.
+2025-07-30 01:23:26 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:23:26 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:23:26 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(KKESH_ROP.DTO.User.LoginDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:23:26 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:23:26 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:23:26 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:23:26 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:23:26 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:23:26 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:23:26 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:23:26 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:23:26 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' using the name '' in request data ...
+2025-07-30 01:23:26 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:23:26 [DBG] Connection id "0HNEEIOPQUSBF", Request id "0HNEEIOPQUSBF:00000003": started reading request body.
+2025-07-30 01:23:26 [DBG] Connection id "0HNEEIOPQUSBF", Request id "0HNEEIOPQUSBF:00000003": done reading request body.
+2025-07-30 01:23:26 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.LoginDto'
+2025-07-30 01:23:26 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:23:26 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:23:26 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:23:26 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:23:26 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:23:27 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:23:27 [DBG] Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:23:27 [DBG] The navigation 'User.Timestamp' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:23:27 [DBG] Context 'ApplicationDbContext' started tracking 'Timestamp' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:23:28 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:23:28 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:23:28 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:23:28 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:23:28 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:23:28 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-30 01:23:28 [INF] Executed action KKESH_ROP.Controllers.UserController.Login (KKESH_ROP) in 1905.8355ms
+2025-07-30 01:23:28 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:23:28 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:23:28 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User/login - 200 null application/json; charset=utf-8 1920.946ms
+2025-07-30 01:23:28 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - null null
+2025-07-30 01:23:28 [DBG] 1 candidate(s) found for the request path '/api/physician/user/6888de0afc38b768866ec0fb'
+2025-07-30 01:23:28 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:23:28 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:23:28 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:23:28 [INF] CORS policy execution successful.
+2025-07-30 01:23:28 [DBG] The request is a preflight request.
+2025-07-30 01:23:28 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - 204 null null 0.3628ms
+2025-07-30 01:23:28 [INF] Request starting HTTP/2 GET https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - null null
+2025-07-30 01:23:28 [DBG] 1 candidate(s) found for the request path '/api/physician/user/6888de0afc38b768866ec0fb'
+2025-07-30 01:23:28 [DBG] Endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)' with route pattern 'api/Physician/user/{userId}' is valid for the request path '/api/physician/user/6888de0afc38b768866ec0fb'
+2025-07-30 01:23:28 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:23:28 [DBG] Successfully validated the token.
+2025-07-30 01:23:28 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-30 01:23:28 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:23:28 [INF] CORS policy execution successful.
+2025-07-30 01:23:28 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:23:28 [INF] Executing endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:23:28 [INF] Route matched with {action = "GetByUserId", controller = "Physician"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(System.String) on controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP).
+2025-07-30 01:23:28 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:23:28 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:23:28 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:23:28 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:23:28 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:23:28 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:23:28 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:23:28 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2025-07-30 01:23:28 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2025-07-30 01:23:28 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:23:28 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:23:28 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2025-07-30 01:23:28 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2025-07-30 01:23:28 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:23:28 [INF] Executed MQL query
+rop-dev.Physicians.aggregate([?])
+2025-07-30 01:23:28 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:23:28 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:23:28 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:23:28 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:23:28 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:23:28 [INF] Executing NotFoundObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.Physician.PhysicianDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:23:28 [INF] Executed action KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP) in 98.7209ms
+2025-07-30 01:23:28 [INF] Executed endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:23:28 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:23:28 [INF] Request finished HTTP/2 GET https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - 404 null application/json; charset=utf-8 102.7284ms
+2025-07-30 01:23:33 [DBG] Connection id "0HNEEIOPQUSBF" received FIN.
+2025-07-30 01:23:33 [DBG] Connection id "0HNEEIOPQUSBF" is closed. The last processed stream ID was 7.
+2025-07-30 01:23:33 [DBG] Connection id "0HNEEIOPQUSBF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:23:33 [DBG] The connection queue processing loop for 0HNEEIOPQUSBF completed.
+2025-07-30 01:23:33 [DBG] Connection id "0HNEEIOPQUSBF" stopped.
+2025-07-30 01:42:56 [DBG] Connection id "0HNEEIOPQUSBG" accepted.
+2025-07-30 01:42:56 [DBG] Connection id "0HNEEIOPQUSBG" started.
+2025-07-30 01:42:56 [DBG] Connection 0HNEEIOPQUSBG established using the following protocol: "Tls12"
+2025-07-30 01:42:56 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User/login - null null
+2025-07-30 01:42:56 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:42:56 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:42:56 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:42:56 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:42:56 [INF] CORS policy execution successful.
+2025-07-30 01:42:56 [DBG] The request is a preflight request.
+2025-07-30 01:42:56 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User/login - 204 null null 1.8446ms
+2025-07-30 01:42:56 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User/login - application/json 45
+2025-07-30 01:42:56 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:42:56 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)' with route pattern 'api/User/Login' is valid for the request path '/api/User/login'
+2025-07-30 01:42:56 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:42:56 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:42:56 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:42:56 [INF] CORS policy execution successful.
+2025-07-30 01:42:56 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:42:56 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:42:56 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(KKESH_ROP.DTO.User.LoginDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:42:56 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:42:56 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:42:56 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:42:56 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:42:56 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:42:56 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:42:56 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:42:56 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:42:56 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' using the name '' in request data ...
+2025-07-30 01:42:56 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:42:56 [DBG] Connection id "0HNEEIOPQUSBG", Request id "0HNEEIOPQUSBG:00000003": started reading request body.
+2025-07-30 01:42:56 [DBG] Connection id "0HNEEIOPQUSBG", Request id "0HNEEIOPQUSBG:00000003": done reading request body.
+2025-07-30 01:42:56 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.LoginDto'
+2025-07-30 01:42:56 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:42:56 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:42:56 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:42:56 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:42:56 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:42:56 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:42:56 [DBG] Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:42:56 [DBG] The navigation 'User.Timestamp' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:42:56 [DBG] Context 'ApplicationDbContext' started tracking 'Timestamp' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:42:56 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:42:56 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:42:56 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:42:56 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:42:56 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:42:56 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-30 01:42:56 [INF] Executed action KKESH_ROP.Controllers.UserController.Login (KKESH_ROP) in 283.9827ms
+2025-07-30 01:42:56 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:42:56 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:42:56 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User/login - 200 null application/json; charset=utf-8 286.3924ms
+2025-07-30 01:42:56 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - null null
+2025-07-30 01:42:56 [DBG] 1 candidate(s) found for the request path '/api/physician/user/6888de0afc38b768866ec0fb'
+2025-07-30 01:42:56 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:42:56 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:42:56 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:42:56 [INF] CORS policy execution successful.
+2025-07-30 01:42:56 [DBG] The request is a preflight request.
+2025-07-30 01:42:56 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - 204 null null 0.4065ms
+2025-07-30 01:42:56 [INF] Request starting HTTP/2 GET https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - null null
+2025-07-30 01:42:56 [DBG] 1 candidate(s) found for the request path '/api/physician/user/6888de0afc38b768866ec0fb'
+2025-07-30 01:42:56 [DBG] Endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)' with route pattern 'api/Physician/user/{userId}' is valid for the request path '/api/physician/user/6888de0afc38b768866ec0fb'
+2025-07-30 01:42:56 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:42:56 [DBG] Successfully validated the token.
+2025-07-30 01:42:56 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-30 01:42:56 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:42:56 [INF] CORS policy execution successful.
+2025-07-30 01:42:56 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:42:56 [INF] Executing endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:42:56 [INF] Route matched with {action = "GetByUserId", controller = "Physician"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(System.String) on controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP).
+2025-07-30 01:42:56 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:42:56 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:42:56 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:42:56 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:42:56 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:42:56 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:42:56 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:42:56 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2025-07-30 01:42:56 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2025-07-30 01:42:56 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:42:56 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:42:56 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2025-07-30 01:42:56 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2025-07-30 01:42:56 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:42:56 [INF] Executed MQL query
+rop-dev.Physicians.aggregate([?])
+2025-07-30 01:42:56 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:42:56 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:42:56 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:42:56 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:42:56 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:42:56 [INF] Executing NotFoundObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.Physician.PhysicianDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:42:56 [INF] Executed action KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP) in 55.219ms
+2025-07-30 01:42:56 [INF] Executed endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:42:56 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:42:56 [INF] Request finished HTTP/2 GET https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - 404 null application/json; charset=utf-8 57.28ms
+2025-07-30 01:42:58 [DBG] Connection id "0HNEEIOPQUSBG" received FIN.
+2025-07-30 01:42:58 [DBG] Connection id "0HNEEIOPQUSBG" is closed. The last processed stream ID was 7.
+2025-07-30 01:42:58 [DBG] Connection id "0HNEEIOPQUSBG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:42:58 [DBG] The connection queue processing loop for 0HNEEIOPQUSBG completed.
+2025-07-30 01:42:58 [DBG] Connection id "0HNEEIOPQUSBG" stopped.
+2025-07-30 01:43:13 [DBG] Connection id "0HNEEIOPQUSBH" accepted.
+2025-07-30 01:43:13 [DBG] Connection id "0HNEEIOPQUSBH" started.
+2025-07-30 01:43:13 [DBG] Connection 0HNEEIOPQUSBH established using the following protocol: "Tls12"
+2025-07-30 01:43:13 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/JoinPhysician - null null
+2025-07-30 01:43:13 [DBG] 1 candidate(s) found for the request path '/api/JoinPhysician'
+2025-07-30 01:43:13 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:43:13 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:43:13 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:43:13 [INF] CORS policy execution successful.
+2025-07-30 01:43:13 [DBG] The request is a preflight request.
+2025-07-30 01:43:13 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/JoinPhysician - 204 null null 3.0904ms
+2025-07-30 01:43:13 [INF] Request starting HTTP/2 POST https://localhost:7000/api/JoinPhysician - application/json 224
+2025-07-30 01:43:13 [DBG] 1 candidate(s) found for the request path '/api/JoinPhysician'
+2025-07-30 01:43:13 [DBG] Endpoint 'KKESH_ROP.Controllers.JoinPhysicianController.Create (KKESH_ROP)' with route pattern 'api/JoinPhysician' is valid for the request path '/api/JoinPhysician'
+2025-07-30 01:43:13 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.JoinPhysicianController.Create (KKESH_ROP)'
+2025-07-30 01:43:13 [DBG] Successfully validated the token.
+2025-07-30 01:43:13 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-30 01:43:13 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:43:13 [INF] CORS policy execution successful.
+2025-07-30 01:43:13 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:43:13 [INF] Executing endpoint 'KKESH_ROP.Controllers.JoinPhysicianController.Create (KKESH_ROP)'
+2025-07-30 01:43:13 [INF] Route matched with {action = "Create", controller = "JoinPhysician"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto) on controller KKESH_ROP.Controllers.JoinPhysicianController (KKESH_ROP).
+2025-07-30 01:43:13 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:43:13 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:43:13 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:43:13 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:43:13 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:43:13 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.JoinPhysicianController (KKESH_ROP)
+2025-07-30 01:43:13 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.JoinPhysicianController (KKESH_ROP)
+2025-07-30 01:43:13 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto' ...
+2025-07-30 01:43:13 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto' using the name '' in request data ...
+2025-07-30 01:43:13 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:43:13 [DBG] Connection id "0HNEEIOPQUSBH", Request id "0HNEEIOPQUSBH:00000003": started reading request body.
+2025-07-30 01:43:13 [DBG] Connection id "0HNEEIOPQUSBH", Request id "0HNEEIOPQUSBH:00000003": done reading request body.
+2025-07-30 01:43:13 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto'
+2025-07-30 01:43:13 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto'.
+2025-07-30 01:43:13 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto'.
+2025-07-30 01:43:13 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto' ...
+2025-07-30 01:43:13 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto'.
+2025-07-30 01:43:13 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:43:13 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:43:13 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:43:13 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:43:13 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:43:13 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianResponseDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:43:13 [INF] Executed action KKESH_ROP.Controllers.JoinPhysicianController.Create (KKESH_ROP) in 101.144ms
+2025-07-30 01:43:13 [INF] Executed endpoint 'KKESH_ROP.Controllers.JoinPhysicianController.Create (KKESH_ROP)'
+2025-07-30 01:43:13 [INF] Request finished HTTP/2 POST https://localhost:7000/api/JoinPhysician - 200 null application/json; charset=utf-8 108.2932ms
+2025-07-30 01:43:18 [DBG] Connection id "0HNEEIOPQUSBH" received FIN.
+2025-07-30 01:43:18 [DBG] Connection id "0HNEEIOPQUSBH" is closed. The last processed stream ID was 3.
+2025-07-30 01:43:18 [DBG] Connection id "0HNEEIOPQUSBH" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:43:18 [DBG] The connection queue processing loop for 0HNEEIOPQUSBH completed.
+2025-07-30 01:43:18 [DBG] Connection id "0HNEEIOPQUSBH" stopped.
+2025-07-30 01:43:32 [DBG] Connection id "0HNEEIOPQUSBI" accepted.
+2025-07-30 01:43:32 [DBG] Connection id "0HNEEIOPQUSBI" started.
+2025-07-30 01:43:32 [DBG] Connection 0HNEEIOPQUSBI established using the following protocol: "Tls12"
+2025-07-30 01:43:32 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User/login - null null
+2025-07-30 01:43:32 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:43:32 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:43:32 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:43:32 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:43:32 [INF] CORS policy execution successful.
+2025-07-30 01:43:32 [DBG] The request is a preflight request.
+2025-07-30 01:43:32 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User/login - 204 null null 0.7756ms
+2025-07-30 01:43:32 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User/login - application/json 45
+2025-07-30 01:43:32 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:43:32 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)' with route pattern 'api/User/Login' is valid for the request path '/api/User/login'
+2025-07-30 01:43:32 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:43:32 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:43:32 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:43:32 [INF] CORS policy execution successful.
+2025-07-30 01:43:32 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:43:32 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:43:32 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(KKESH_ROP.DTO.User.LoginDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:43:32 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:43:32 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:43:32 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:43:32 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:43:32 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:43:32 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:43:32 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:43:32 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:43:32 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' using the name '' in request data ...
+2025-07-30 01:43:32 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:43:32 [DBG] Connection id "0HNEEIOPQUSBI", Request id "0HNEEIOPQUSBI:00000003": started reading request body.
+2025-07-30 01:43:32 [DBG] Connection id "0HNEEIOPQUSBI", Request id "0HNEEIOPQUSBI:00000003": done reading request body.
+2025-07-30 01:43:32 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.LoginDto'
+2025-07-30 01:43:32 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:43:32 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:43:32 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:43:32 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:43:32 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:43:32 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:43:32 [DBG] Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:43:32 [DBG] The navigation 'User.Timestamp' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:43:32 [DBG] Context 'ApplicationDbContext' started tracking 'Timestamp' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:43:32 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:43:32 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:43:32 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:43:32 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:43:32 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:43:32 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-30 01:43:32 [INF] Executed action KKESH_ROP.Controllers.UserController.Login (KKESH_ROP) in 233.6439ms
+2025-07-30 01:43:32 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:43:32 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:43:32 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User/login - 200 null application/json; charset=utf-8 234.701ms
+2025-07-30 01:43:32 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - null null
+2025-07-30 01:43:32 [DBG] 1 candidate(s) found for the request path '/api/physician/user/6888de0afc38b768866ec0fb'
+2025-07-30 01:43:32 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:43:32 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:43:32 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:43:32 [INF] CORS policy execution successful.
+2025-07-30 01:43:32 [DBG] The request is a preflight request.
+2025-07-30 01:43:32 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - 204 null null 0.3209ms
+2025-07-30 01:43:32 [INF] Request starting HTTP/2 GET https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - null null
+2025-07-30 01:43:32 [DBG] 1 candidate(s) found for the request path '/api/physician/user/6888de0afc38b768866ec0fb'
+2025-07-30 01:43:32 [DBG] Endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)' with route pattern 'api/Physician/user/{userId}' is valid for the request path '/api/physician/user/6888de0afc38b768866ec0fb'
+2025-07-30 01:43:32 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:43:32 [DBG] Successfully validated the token.
+2025-07-30 01:43:32 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-30 01:43:32 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:43:32 [INF] CORS policy execution successful.
+2025-07-30 01:43:32 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:43:32 [INF] Executing endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:43:32 [INF] Route matched with {action = "GetByUserId", controller = "Physician"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(System.String) on controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP).
+2025-07-30 01:43:32 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:43:32 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:43:32 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:43:32 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:43:32 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:43:32 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:43:32 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:43:32 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2025-07-30 01:43:32 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2025-07-30 01:43:32 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:43:32 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:43:32 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2025-07-30 01:43:32 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2025-07-30 01:43:32 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:43:32 [INF] Executed MQL query
+rop-dev.Physicians.aggregate([?])
+2025-07-30 01:43:32 [DBG] Context 'ApplicationDbContext' started tracking 'Physician' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:43:32 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:43:32 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:43:32 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:43:32 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:43:32 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:43:32 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.Physician.PhysicianDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:43:32 [INF] Executed action KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP) in 38.687ms
+2025-07-30 01:43:32 [INF] Executed endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:43:32 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:43:32 [INF] Request finished HTTP/2 GET https://localhost:7000/api/physician/user/6888de0afc38b768866ec0fb - 200 null application/json; charset=utf-8 40.145ms
+2025-07-30 01:43:33 [DBG] Connection id "0HNEEIOPQUSBI" received FIN.
+2025-07-30 01:43:33 [DBG] Connection id "0HNEEIOPQUSBI" is closed. The last processed stream ID was 7.
+2025-07-30 01:43:33 [DBG] Connection id "0HNEEIOPQUSBI" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:43:33 [DBG] The connection queue processing loop for 0HNEEIOPQUSBI completed.
+2025-07-30 01:43:33 [DBG] Connection id "0HNEEIOPQUSBI" stopped.
+2025-07-30 01:45:57 [DBG] Connection id "0HNEEIOPQUSBJ" accepted.
+2025-07-30 01:45:57 [DBG] Connection id "0HNEEIOPQUSBJ" started.
+2025-07-30 01:45:57 [DBG] Connection 0HNEEIOPQUSBJ established using the following protocol: "Tls12"
+2025-07-30 01:45:57 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User - null null
+2025-07-30 01:45:57 [DBG] 1 candidate(s) found for the request path '/api/User'
+2025-07-30 01:45:57 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:45:57 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:45:57 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:45:57 [INF] CORS policy execution successful.
+2025-07-30 01:45:57 [DBG] The request is a preflight request.
+2025-07-30 01:45:57 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User - 204 null null 2.1256ms
+2025-07-30 01:45:57 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User - application/json 81
+2025-07-30 01:45:57 [DBG] 1 candidate(s) found for the request path '/api/User'
+2025-07-30 01:45:57 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Create (KKESH_ROP)' with route pattern 'api/User' is valid for the request path '/api/User'
+2025-07-30 01:45:57 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Create (KKESH_ROP)'
+2025-07-30 01:45:57 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:45:57 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:45:57 [INF] CORS policy execution successful.
+2025-07-30 01:45:57 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:45:57 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Create (KKESH_ROP)'
+2025-07-30 01:45:57 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(KKESH_ROP.DTO.User.CreateUserDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:45:57 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:45:57 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:45:57 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:45:57 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:45:57 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:45:57 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:45:57 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:45:57 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto' ...
+2025-07-30 01:45:57 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto' using the name '' in request data ...
+2025-07-30 01:45:57 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:45:57 [DBG] Connection id "0HNEEIOPQUSBJ", Request id "0HNEEIOPQUSBJ:00000003": started reading request body.
+2025-07-30 01:45:57 [DBG] Connection id "0HNEEIOPQUSBJ", Request id "0HNEEIOPQUSBJ:00000003": done reading request body.
+2025-07-30 01:45:57 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.CreateUserDto'
+2025-07-30 01:45:57 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto'.
+2025-07-30 01:45:57 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto'.
+2025-07-30 01:45:57 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto' ...
+2025-07-30 01:45:57 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto'.
+2025-07-30 01:45:57 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:45:57 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:45:57 [DBG] 'ApplicationDbContext' generated a value for the property 'User._id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:45:57 [DBG] Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:45:57 [DBG] Context 'ApplicationDbContext' started tracking 'Timestamp' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:45:57 [DBG] SaveChanges starting for 'ApplicationDbContext'.
+2025-07-30 01:45:57 [DBG] DetectChanges starting for 'ApplicationDbContext'.
+2025-07-30 01:45:57 [DBG] DetectChanges completed for 'ApplicationDbContext'.
+2025-07-30 01:45:57 [INF] Executing Bulk Write (0.0294 ms) Collection='rop-dev.users', Insertions=1, Deletions=0, Modifications=0
+2025-07-30 01:45:57 [INF] Executed Bulk Write (18.6701 ms) Collection='rop-dev.users', Inserted=1, Deleted=0, Modified=0
+2025-07-30 01:45:57 [DBG] An entity of type 'User' tracked by 'ApplicationDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:45:57 [DBG] An entity of type 'Timestamp' tracked by 'ApplicationDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:45:57 [DBG] SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2025-07-30 01:45:57 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:45:57 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:45:57 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:45:57 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:45:57 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:45:57 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.User.UserDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:45:57 [INF] Executed action KKESH_ROP.Controllers.UserController.Create (KKESH_ROP) in 330.408ms
+2025-07-30 01:45:57 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Create (KKESH_ROP)'
+2025-07-30 01:45:57 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:45:57 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User - 200 null application/json; charset=utf-8 333.1496ms
+2025-07-30 01:45:58 [DBG] Connection id "0HNEEIOPQUSBJ" received FIN.
+2025-07-30 01:45:58 [DBG] Connection id "0HNEEIOPQUSBJ" is closed. The last processed stream ID was 3.
+2025-07-30 01:45:58 [DBG] Connection id "0HNEEIOPQUSBJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:45:58 [DBG] The connection queue processing loop for 0HNEEIOPQUSBJ completed.
+2025-07-30 01:45:58 [DBG] Connection id "0HNEEIOPQUSBJ" stopped.
+2025-07-30 01:46:09 [DBG] Connection id "0HNEEIOPQUSBK" accepted.
+2025-07-30 01:46:09 [DBG] Connection id "0HNEEIOPQUSBK" started.
+2025-07-30 01:46:09 [DBG] Connection 0HNEEIOPQUSBK established using the following protocol: "Tls12"
+2025-07-30 01:46:09 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User/login - null null
+2025-07-30 01:46:09 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:46:09 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:46:09 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:46:09 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:46:09 [INF] CORS policy execution successful.
+2025-07-30 01:46:09 [DBG] The request is a preflight request.
+2025-07-30 01:46:09 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User/login - 204 null null 34.876ms
+2025-07-30 01:46:09 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User/login - application/json 40
+2025-07-30 01:46:09 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:46:09 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)' with route pattern 'api/User/Login' is valid for the request path '/api/User/login'
+2025-07-30 01:46:09 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:46:09 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:46:09 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:46:09 [INF] CORS policy execution successful.
+2025-07-30 01:46:09 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:46:09 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:46:09 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(KKESH_ROP.DTO.User.LoginDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:46:09 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:46:09 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:46:09 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:46:09 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:46:09 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:46:09 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:46:09 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:46:09 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:46:09 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' using the name '' in request data ...
+2025-07-30 01:46:09 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:46:09 [DBG] Connection id "0HNEEIOPQUSBK", Request id "0HNEEIOPQUSBK:00000003": started reading request body.
+2025-07-30 01:46:09 [DBG] Connection id "0HNEEIOPQUSBK", Request id "0HNEEIOPQUSBK:00000003": done reading request body.
+2025-07-30 01:46:09 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.LoginDto'
+2025-07-30 01:46:09 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:46:09 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:46:09 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:46:09 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:46:09 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:46:09 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:46:09 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:46:09 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:46:09 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:46:09 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:46:09 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:46:09 [INF] Executing NotFoundObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-30 01:46:09 [INF] Executed action KKESH_ROP.Controllers.UserController.Login (KKESH_ROP) in 5.1192ms
+2025-07-30 01:46:09 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:46:09 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:46:09 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User/login - 404 null application/json; charset=utf-8 8.7561ms
+2025-07-30 01:46:13 [DBG] Connection id "0HNEEIOPQUSBK" received FIN.
+2025-07-30 01:46:13 [DBG] Connection id "0HNEEIOPQUSBK" is closed. The last processed stream ID was 3.
+2025-07-30 01:46:13 [DBG] Connection id "0HNEEIOPQUSBK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:46:13 [DBG] The connection queue processing loop for 0HNEEIOPQUSBK completed.
+2025-07-30 01:46:13 [DBG] Connection id "0HNEEIOPQUSBK" stopped.
+2025-07-30 01:46:15 [DBG] Connection id "0HNEEIOPQUSBL" accepted.
+2025-07-30 01:46:15 [DBG] Connection id "0HNEEIOPQUSBL" started.
+2025-07-30 01:46:15 [DBG] Connection 0HNEEIOPQUSBL established using the following protocol: "Tls12"
+2025-07-30 01:46:15 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User/login - null null
+2025-07-30 01:46:15 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:46:15 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:46:15 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:46:15 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:46:15 [INF] CORS policy execution successful.
+2025-07-30 01:46:15 [DBG] The request is a preflight request.
+2025-07-30 01:46:15 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User/login - 204 null null 1.1497ms
+2025-07-30 01:46:15 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User/login - application/json 41
+2025-07-30 01:46:15 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:46:15 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)' with route pattern 'api/User/Login' is valid for the request path '/api/User/login'
+2025-07-30 01:46:15 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:46:15 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:46:15 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:46:15 [INF] CORS policy execution successful.
+2025-07-30 01:46:15 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:46:15 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:46:15 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(KKESH_ROP.DTO.User.LoginDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:46:15 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:46:15 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:46:15 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:46:15 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:46:15 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:46:15 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:46:15 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:46:15 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:46:15 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' using the name '' in request data ...
+2025-07-30 01:46:15 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:46:15 [DBG] Connection id "0HNEEIOPQUSBL", Request id "0HNEEIOPQUSBL:00000003": started reading request body.
+2025-07-30 01:46:15 [DBG] Connection id "0HNEEIOPQUSBL", Request id "0HNEEIOPQUSBL:00000003": done reading request body.
+2025-07-30 01:46:15 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.LoginDto'
+2025-07-30 01:46:15 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:46:15 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:46:15 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:46:15 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:46:15 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:46:15 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:46:15 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:46:15 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:46:15 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:46:15 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:46:15 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:46:15 [INF] Executing NotFoundObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-30 01:46:15 [INF] Executed action KKESH_ROP.Controllers.UserController.Login (KKESH_ROP) in 5.6705ms
+2025-07-30 01:46:15 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:46:15 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:46:15 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User/login - 404 null application/json; charset=utf-8 7.0792ms
+2025-07-30 01:46:18 [DBG] Connection id "0HNEEIOPQUSBL" received FIN.
+2025-07-30 01:46:18 [DBG] Connection id "0HNEEIOPQUSBL" is closed. The last processed stream ID was 3.
+2025-07-30 01:46:18 [DBG] The connection queue processing loop for 0HNEEIOPQUSBL completed.
+2025-07-30 01:46:18 [DBG] Connection id "0HNEEIOPQUSBL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:46:18 [DBG] Connection id "0HNEEIOPQUSBL" stopped.
+2025-07-30 01:46:32 [DBG] Connection id "0HNEEIOPQUSBM" accepted.
+2025-07-30 01:46:32 [DBG] Connection id "0HNEEIOPQUSBM" started.
+2025-07-30 01:46:32 [DBG] Connection 0HNEEIOPQUSBM established using the following protocol: "Tls12"
+2025-07-30 01:46:32 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User - null null
+2025-07-30 01:46:32 [DBG] 1 candidate(s) found for the request path '/api/User'
+2025-07-30 01:46:32 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:46:32 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:46:32 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:46:32 [INF] CORS policy execution successful.
+2025-07-30 01:46:32 [DBG] The request is a preflight request.
+2025-07-30 01:46:32 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User - 204 null null 7.7449ms
+2025-07-30 01:46:32 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User - application/json 82
+2025-07-30 01:46:32 [DBG] 1 candidate(s) found for the request path '/api/User'
+2025-07-30 01:46:32 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Create (KKESH_ROP)' with route pattern 'api/User' is valid for the request path '/api/User'
+2025-07-30 01:46:32 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Create (KKESH_ROP)'
+2025-07-30 01:46:32 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:46:32 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:46:32 [INF] CORS policy execution successful.
+2025-07-30 01:46:32 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:46:32 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Create (KKESH_ROP)'
+2025-07-30 01:46:32 [INF] Route matched with {action = "Create", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(KKESH_ROP.DTO.User.CreateUserDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:46:32 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:46:32 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:46:32 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:46:32 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:46:32 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:46:32 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:46:32 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:46:32 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto' ...
+2025-07-30 01:46:32 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto' using the name '' in request data ...
+2025-07-30 01:46:32 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:46:32 [DBG] Connection id "0HNEEIOPQUSBM", Request id "0HNEEIOPQUSBM:00000003": started reading request body.
+2025-07-30 01:46:32 [DBG] Connection id "0HNEEIOPQUSBM", Request id "0HNEEIOPQUSBM:00000003": done reading request body.
+2025-07-30 01:46:32 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.CreateUserDto'
+2025-07-30 01:46:32 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto'.
+2025-07-30 01:46:32 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto'.
+2025-07-30 01:46:32 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto' ...
+2025-07-30 01:46:32 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.CreateUserDto'.
+2025-07-30 01:46:32 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:46:32 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:46:32 [DBG] 'ApplicationDbContext' generated a value for the property 'User._id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:46:32 [DBG] Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:46:32 [DBG] Context 'ApplicationDbContext' started tracking 'Timestamp' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:46:32 [DBG] SaveChanges starting for 'ApplicationDbContext'.
+2025-07-30 01:46:32 [DBG] DetectChanges starting for 'ApplicationDbContext'.
+2025-07-30 01:46:32 [DBG] DetectChanges completed for 'ApplicationDbContext'.
+2025-07-30 01:46:32 [INF] Executing Bulk Write (0.0243 ms) Collection='rop-dev.users', Insertions=1, Deletions=0, Modifications=0
+2025-07-30 01:46:32 [INF] Executed Bulk Write (2.3922 ms) Collection='rop-dev.users', Inserted=1, Deleted=0, Modified=0
+2025-07-30 01:46:32 [DBG] An entity of type 'User' tracked by 'ApplicationDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:46:32 [DBG] An entity of type 'Timestamp' tracked by 'ApplicationDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:46:32 [DBG] SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2025-07-30 01:46:32 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:46:32 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:46:32 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:46:32 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:46:32 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:46:32 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.User.UserDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:46:32 [INF] Executed action KKESH_ROP.Controllers.UserController.Create (KKESH_ROP) in 230.9154ms
+2025-07-30 01:46:32 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Create (KKESH_ROP)'
+2025-07-30 01:46:32 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:46:32 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User - 200 null application/json; charset=utf-8 231.858ms
+2025-07-30 01:46:33 [DBG] Connection id "0HNEEIOPQUSBM" received FIN.
+2025-07-30 01:46:33 [DBG] Connection id "0HNEEIOPQUSBM" is closed. The last processed stream ID was 3.
+2025-07-30 01:46:33 [DBG] Connection id "0HNEEIOPQUSBM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:46:33 [DBG] The connection queue processing loop for 0HNEEIOPQUSBM completed.
+2025-07-30 01:46:33 [DBG] Connection id "0HNEEIOPQUSBM" stopped.
+2025-07-30 01:46:42 [DBG] Connection id "0HNEEIOPQUSBN" accepted.
+2025-07-30 01:46:42 [DBG] Connection id "0HNEEIOPQUSBN" started.
+2025-07-30 01:46:42 [DBG] Connection 0HNEEIOPQUSBN established using the following protocol: "Tls12"
+2025-07-30 01:46:42 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User/login - null null
+2025-07-30 01:46:42 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:46:42 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:46:42 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:46:42 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:46:42 [INF] CORS policy execution successful.
+2025-07-30 01:46:42 [DBG] The request is a preflight request.
+2025-07-30 01:46:42 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User/login - 204 null null 1.0717ms
+2025-07-30 01:46:42 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User/login - application/json 41
+2025-07-30 01:46:42 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:46:42 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)' with route pattern 'api/User/Login' is valid for the request path '/api/User/login'
+2025-07-30 01:46:42 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:46:42 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:46:42 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:46:42 [INF] CORS policy execution successful.
+2025-07-30 01:46:42 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:46:42 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:46:42 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(KKESH_ROP.DTO.User.LoginDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:46:42 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:46:42 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:46:42 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:46:42 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:46:42 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:46:42 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:46:42 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:46:42 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:46:42 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' using the name '' in request data ...
+2025-07-30 01:46:42 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:46:42 [DBG] Connection id "0HNEEIOPQUSBN", Request id "0HNEEIOPQUSBN:00000003": started reading request body.
+2025-07-30 01:46:42 [DBG] Connection id "0HNEEIOPQUSBN", Request id "0HNEEIOPQUSBN:00000003": done reading request body.
+2025-07-30 01:46:42 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.LoginDto'
+2025-07-30 01:46:42 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:46:42 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:46:42 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:46:42 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:46:42 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:46:42 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:46:42 [DBG] Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:46:42 [DBG] The navigation 'User.Timestamp' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:46:42 [DBG] Context 'ApplicationDbContext' started tracking 'Timestamp' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:46:42 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:46:42 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:46:42 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:46:42 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:46:42 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:46:42 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-30 01:46:42 [INF] Executed action KKESH_ROP.Controllers.UserController.Login (KKESH_ROP) in 234.3888ms
+2025-07-30 01:46:42 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:46:42 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:46:42 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User/login - 200 null application/json; charset=utf-8 236.0152ms
+2025-07-30 01:46:42 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - null null
+2025-07-30 01:46:42 [DBG] 1 candidate(s) found for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:46:42 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:46:42 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:46:42 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:46:42 [INF] CORS policy execution successful.
+2025-07-30 01:46:42 [DBG] The request is a preflight request.
+2025-07-30 01:46:42 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - 204 null null 0.3293ms
+2025-07-30 01:46:42 [INF] Request starting HTTP/2 GET https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - null null
+2025-07-30 01:46:42 [DBG] 1 candidate(s) found for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:46:42 [DBG] Endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)' with route pattern 'api/Physician/user/{userId}' is valid for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:46:42 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:46:42 [DBG] Successfully validated the token.
+2025-07-30 01:46:42 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-30 01:46:42 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:46:42 [INF] CORS policy execution successful.
+2025-07-30 01:46:42 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:46:42 [INF] Executing endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:46:42 [INF] Route matched with {action = "GetByUserId", controller = "Physician"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(System.String) on controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP).
+2025-07-30 01:46:42 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:46:42 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:46:42 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:46:42 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:46:42 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:46:42 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:46:42 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:46:42 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2025-07-30 01:46:42 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2025-07-30 01:46:42 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:46:42 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:46:42 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2025-07-30 01:46:42 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2025-07-30 01:46:42 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:46:42 [INF] Executed MQL query
+rop-dev.Physicians.aggregate([?])
+2025-07-30 01:46:42 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:46:42 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:46:42 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:46:42 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:46:42 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:46:42 [INF] Executing NotFoundObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.Physician.PhysicianDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:46:42 [INF] Executed action KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP) in 62.5585ms
+2025-07-30 01:46:42 [INF] Executed endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:46:42 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:46:42 [INF] Request finished HTTP/2 GET https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - 404 null application/json; charset=utf-8 68.3377ms
+2025-07-30 01:46:43 [DBG] Connection id "0HNEEIOPQUSBN" received FIN.
+2025-07-30 01:46:43 [DBG] Connection id "0HNEEIOPQUSBN" is closed. The last processed stream ID was 7.
+2025-07-30 01:46:43 [DBG] Connection id "0HNEEIOPQUSBN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:46:43 [DBG] The connection queue processing loop for 0HNEEIOPQUSBN completed.
+2025-07-30 01:46:43 [DBG] Connection id "0HNEEIOPQUSBN" stopped.
+2025-07-30 01:47:10 [DBG] Connection id "0HNEEIOPQUSBO" accepted.
+2025-07-30 01:47:10 [DBG] Connection id "0HNEEIOPQUSBO" started.
+2025-07-30 01:47:10 [DBG] Connection 0HNEEIOPQUSBO established using the following protocol: "Tls12"
+2025-07-30 01:47:10 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/JoinPhysician - null null
+2025-07-30 01:47:10 [DBG] 1 candidate(s) found for the request path '/api/JoinPhysician'
+2025-07-30 01:47:10 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:47:10 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:47:10 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:47:10 [INF] CORS policy execution successful.
+2025-07-30 01:47:10 [DBG] The request is a preflight request.
+2025-07-30 01:47:10 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/JoinPhysician - 204 null null 100.4292ms
+2025-07-30 01:47:10 [INF] Request starting HTTP/2 POST https://localhost:7000/api/JoinPhysician - application/json 226
+2025-07-30 01:47:10 [DBG] 1 candidate(s) found for the request path '/api/JoinPhysician'
+2025-07-30 01:47:10 [DBG] Endpoint 'KKESH_ROP.Controllers.JoinPhysicianController.Create (KKESH_ROP)' with route pattern 'api/JoinPhysician' is valid for the request path '/api/JoinPhysician'
+2025-07-30 01:47:10 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.JoinPhysicianController.Create (KKESH_ROP)'
+2025-07-30 01:47:10 [DBG] Successfully validated the token.
+2025-07-30 01:47:10 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-30 01:47:10 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:47:10 [INF] CORS policy execution successful.
+2025-07-30 01:47:10 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:47:10 [INF] Executing endpoint 'KKESH_ROP.Controllers.JoinPhysicianController.Create (KKESH_ROP)'
+2025-07-30 01:47:10 [INF] Route matched with {action = "Create", controller = "JoinPhysician"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto) on controller KKESH_ROP.Controllers.JoinPhysicianController (KKESH_ROP).
+2025-07-30 01:47:10 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:47:10 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:47:10 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:47:10 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:47:10 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:47:10 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.JoinPhysicianController (KKESH_ROP)
+2025-07-30 01:47:10 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.JoinPhysicianController (KKESH_ROP)
+2025-07-30 01:47:10 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto' ...
+2025-07-30 01:47:10 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto' using the name '' in request data ...
+2025-07-30 01:47:10 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:47:10 [DBG] Connection id "0HNEEIOPQUSBO", Request id "0HNEEIOPQUSBO:00000003": started reading request body.
+2025-07-30 01:47:10 [DBG] Connection id "0HNEEIOPQUSBO", Request id "0HNEEIOPQUSBO:00000003": done reading request body.
+2025-07-30 01:47:10 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto'
+2025-07-30 01:47:10 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto'.
+2025-07-30 01:47:10 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto'.
+2025-07-30 01:47:10 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto' ...
+2025-07-30 01:47:10 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianRequestDto'.
+2025-07-30 01:47:10 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:47:10 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:47:10 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:47:10 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:47:10 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:47:10 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.JoinPhysician.CreateJoinPhysicianResponseDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:47:10 [INF] Executed action KKESH_ROP.Controllers.JoinPhysicianController.Create (KKESH_ROP) in 16.7292ms
+2025-07-30 01:47:10 [INF] Executed endpoint 'KKESH_ROP.Controllers.JoinPhysicianController.Create (KKESH_ROP)'
+2025-07-30 01:47:10 [INF] Request finished HTTP/2 POST https://localhost:7000/api/JoinPhysician - 200 null application/json; charset=utf-8 20.0165ms
+2025-07-30 01:47:13 [DBG] Connection id "0HNEEIOPQUSBO" received FIN.
+2025-07-30 01:47:13 [DBG] Connection id "0HNEEIOPQUSBO" is closed. The last processed stream ID was 3.
+2025-07-30 01:47:13 [DBG] Connection id "0HNEEIOPQUSBO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:47:13 [DBG] The connection queue processing loop for 0HNEEIOPQUSBO completed.
+2025-07-30 01:47:13 [DBG] Connection id "0HNEEIOPQUSBO" stopped.
+2025-07-30 01:47:35 [DBG] Connection id "0HNEEIOPQUSBP" accepted.
+2025-07-30 01:47:35 [DBG] Connection id "0HNEEIOPQUSBP" started.
+2025-07-30 01:47:35 [DBG] Connection 0HNEEIOPQUSBP established using the following protocol: "Tls12"
+2025-07-30 01:47:35 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User/login - null null
+2025-07-30 01:47:35 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:47:35 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:47:35 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:47:35 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:47:35 [INF] CORS policy execution successful.
+2025-07-30 01:47:35 [DBG] The request is a preflight request.
+2025-07-30 01:47:35 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User/login - 204 null null 27.6175ms
+2025-07-30 01:47:35 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User/login - application/json 41
+2025-07-30 01:47:35 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:47:35 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)' with route pattern 'api/User/Login' is valid for the request path '/api/User/login'
+2025-07-30 01:47:35 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:47:35 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:47:35 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:47:35 [INF] CORS policy execution successful.
+2025-07-30 01:47:35 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:47:35 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:47:35 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(KKESH_ROP.DTO.User.LoginDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:47:35 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:47:35 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:47:35 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:47:35 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:47:35 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:47:35 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:47:35 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:47:35 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:47:35 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' using the name '' in request data ...
+2025-07-30 01:47:35 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:47:35 [DBG] Connection id "0HNEEIOPQUSBP", Request id "0HNEEIOPQUSBP:00000003": started reading request body.
+2025-07-30 01:47:35 [DBG] Connection id "0HNEEIOPQUSBP", Request id "0HNEEIOPQUSBP:00000003": done reading request body.
+2025-07-30 01:47:35 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.LoginDto'
+2025-07-30 01:47:35 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:47:35 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:47:35 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:47:35 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:47:35 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:47:35 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:47:35 [DBG] Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:47:35 [DBG] The navigation 'User.Timestamp' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:47:35 [DBG] Context 'ApplicationDbContext' started tracking 'Timestamp' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:47:35 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:47:35 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:47:35 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:47:35 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:47:35 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:47:35 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-30 01:47:35 [INF] Executed action KKESH_ROP.Controllers.UserController.Login (KKESH_ROP) in 231.271ms
+2025-07-30 01:47:35 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:47:35 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:47:35 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User/login - 200 null application/json; charset=utf-8 234.6964ms
+2025-07-30 01:47:35 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - null null
+2025-07-30 01:47:35 [DBG] 1 candidate(s) found for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:47:35 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:47:35 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:47:35 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:47:35 [INF] CORS policy execution successful.
+2025-07-30 01:47:35 [DBG] The request is a preflight request.
+2025-07-30 01:47:35 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - 204 null null 0.5587ms
+2025-07-30 01:47:35 [INF] Request starting HTTP/2 GET https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - null null
+2025-07-30 01:47:35 [DBG] 1 candidate(s) found for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:47:35 [DBG] Endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)' with route pattern 'api/Physician/user/{userId}' is valid for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:47:35 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:47:35 [DBG] Successfully validated the token.
+2025-07-30 01:47:35 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-30 01:47:35 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:47:35 [INF] CORS policy execution successful.
+2025-07-30 01:47:35 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:47:35 [INF] Executing endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:47:35 [INF] Route matched with {action = "GetByUserId", controller = "Physician"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(System.String) on controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP).
+2025-07-30 01:47:35 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:47:35 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:47:35 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:47:35 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:47:35 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:47:35 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:47:35 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:47:35 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2025-07-30 01:47:35 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2025-07-30 01:47:35 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:47:35 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:47:35 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2025-07-30 01:47:35 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2025-07-30 01:47:35 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:47:35 [INF] Executed MQL query
+rop-dev.Physicians.aggregate([?])
+2025-07-30 01:47:35 [DBG] Context 'ApplicationDbContext' started tracking 'Physician' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:47:35 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:47:35 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:47:35 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:47:35 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:47:35 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:47:35 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.Physician.PhysicianDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:47:35 [INF] Executed action KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP) in 37.7655ms
+2025-07-30 01:47:35 [INF] Executed endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:47:35 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:47:35 [INF] Request finished HTTP/2 GET https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - 200 null application/json; charset=utf-8 40.2067ms
+2025-07-30 01:47:38 [DBG] Connection id "0HNEEIOPQUSBP" received FIN.
+2025-07-30 01:47:38 [DBG] Connection id "0HNEEIOPQUSBP" is closed. The last processed stream ID was 7.
+2025-07-30 01:47:38 [DBG] The connection queue processing loop for 0HNEEIOPQUSBP completed.
+2025-07-30 01:47:38 [DBG] Connection id "0HNEEIOPQUSBP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:47:38 [DBG] Connection id "0HNEEIOPQUSBP" stopped.
+2025-07-30 01:49:12 [DBG] Connection id "0HNEEIOPQUSBQ" accepted.
+2025-07-30 01:49:12 [DBG] Connection id "0HNEEIOPQUSBQ" started.
+2025-07-30 01:49:12 [DBG] Connection 0HNEEIOPQUSBQ established using the following protocol: "Tls12"
+2025-07-30 01:49:13 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User/login - null null
+2025-07-30 01:49:13 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:49:13 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:49:13 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:49:13 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:49:13 [INF] CORS policy execution successful.
+2025-07-30 01:49:13 [DBG] The request is a preflight request.
+2025-07-30 01:49:13 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User/login - 204 null null 28.0027ms
+2025-07-30 01:49:13 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User/login - application/json 41
+2025-07-30 01:49:13 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:49:13 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)' with route pattern 'api/User/Login' is valid for the request path '/api/User/login'
+2025-07-30 01:49:13 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:49:13 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:49:13 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:49:13 [INF] CORS policy execution successful.
+2025-07-30 01:49:13 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:49:13 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:49:13 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(KKESH_ROP.DTO.User.LoginDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:49:13 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:49:13 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:49:13 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:49:13 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:49:13 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:49:13 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:49:13 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:49:13 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:49:13 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' using the name '' in request data ...
+2025-07-30 01:49:13 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:49:13 [DBG] Connection id "0HNEEIOPQUSBQ", Request id "0HNEEIOPQUSBQ:00000003": started reading request body.
+2025-07-30 01:49:13 [DBG] Connection id "0HNEEIOPQUSBQ", Request id "0HNEEIOPQUSBQ:00000003": done reading request body.
+2025-07-30 01:49:13 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.LoginDto'
+2025-07-30 01:49:13 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:49:13 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:49:13 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:49:13 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:49:13 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:49:13 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:49:13 [DBG] Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:49:13 [DBG] The navigation 'User.Timestamp' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:49:13 [DBG] Context 'ApplicationDbContext' started tracking 'Timestamp' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:49:13 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:49:13 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:49:13 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:49:13 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:49:13 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:49:13 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-30 01:49:13 [INF] Executed action KKESH_ROP.Controllers.UserController.Login (KKESH_ROP) in 312.2045ms
+2025-07-30 01:49:13 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:49:13 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:49:13 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User/login - 200 null application/json; charset=utf-8 315.5036ms
+2025-07-30 01:49:13 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - null null
+2025-07-30 01:49:13 [DBG] 1 candidate(s) found for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:49:13 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:49:13 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:49:13 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:49:13 [INF] CORS policy execution successful.
+2025-07-30 01:49:13 [DBG] The request is a preflight request.
+2025-07-30 01:49:13 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - 204 null null 0.697ms
+2025-07-30 01:49:13 [INF] Request starting HTTP/2 GET https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - null null
+2025-07-30 01:49:13 [DBG] 1 candidate(s) found for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:49:13 [DBG] Endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)' with route pattern 'api/Physician/user/{userId}' is valid for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:49:13 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:49:13 [DBG] Successfully validated the token.
+2025-07-30 01:49:13 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-30 01:49:13 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:49:13 [INF] CORS policy execution successful.
+2025-07-30 01:49:13 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:49:13 [INF] Executing endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:49:13 [INF] Route matched with {action = "GetByUserId", controller = "Physician"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(System.String) on controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP).
+2025-07-30 01:49:13 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:49:13 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:49:13 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:49:13 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:49:13 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:49:13 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:49:13 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:49:13 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2025-07-30 01:49:13 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2025-07-30 01:49:13 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:49:13 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:49:13 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2025-07-30 01:49:13 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2025-07-30 01:49:13 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:49:13 [INF] Executed MQL query
+rop-dev.Physicians.aggregate([?])
+2025-07-30 01:49:13 [DBG] Context 'ApplicationDbContext' started tracking 'Physician' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:49:13 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:49:13 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:49:13 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:49:13 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:49:13 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:49:13 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.Physician.PhysicianDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:49:13 [INF] Executed action KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP) in 66.2998ms
+2025-07-30 01:49:13 [INF] Executed endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:49:13 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:49:13 [INF] Request finished HTTP/2 GET https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - 200 null application/json; charset=utf-8 74.6157ms
+2025-07-30 01:49:18 [DBG] Connection id "0HNEEIOPQUSBQ" received FIN.
+2025-07-30 01:49:18 [DBG] Connection id "0HNEEIOPQUSBQ" is closed. The last processed stream ID was 7.
+2025-07-30 01:49:18 [DBG] Connection id "0HNEEIOPQUSBQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:49:18 [DBG] The connection queue processing loop for 0HNEEIOPQUSBQ completed.
+2025-07-30 01:49:18 [DBG] Connection id "0HNEEIOPQUSBQ" stopped.
+2025-07-30 01:50:44 [DBG] Connection id "0HNEEIOPQUSBR" accepted.
+2025-07-30 01:50:44 [DBG] Connection id "0HNEEIOPQUSBR" started.
+2025-07-30 01:50:44 [DBG] Connection 0HNEEIOPQUSBR established using the following protocol: "Tls12"
+2025-07-30 01:50:44 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/User/login - null null
+2025-07-30 01:50:44 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:50:44 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:50:44 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:50:44 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:50:44 [INF] CORS policy execution successful.
+2025-07-30 01:50:44 [DBG] The request is a preflight request.
+2025-07-30 01:50:44 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/User/login - 204 null null 2.6302ms
+2025-07-30 01:50:44 [INF] Request starting HTTP/2 POST https://localhost:7000/api/User/login - application/json 41
+2025-07-30 01:50:44 [DBG] 1 candidate(s) found for the request path '/api/User/login'
+2025-07-30 01:50:44 [DBG] Endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)' with route pattern 'api/User/Login' is valid for the request path '/api/User/login'
+2025-07-30 01:50:44 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:50:44 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:50:44 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:50:44 [INF] CORS policy execution successful.
+2025-07-30 01:50:44 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:50:44 [INF] Executing endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:50:44 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(KKESH_ROP.DTO.User.LoginDto) on controller KKESH_ROP.Controllers.UserController (KKESH_ROP).
+2025-07-30 01:50:44 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:50:44 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:50:44 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:50:44 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:50:44 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:50:44 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:50:44 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.UserController (KKESH_ROP)
+2025-07-30 01:50:44 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:50:44 [DBG] Attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' using the name '' in request data ...
+2025-07-30 01:50:44 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-07-30 01:50:44 [DBG] Connection id "0HNEEIOPQUSBR", Request id "0HNEEIOPQUSBR:00000003": started reading request body.
+2025-07-30 01:50:44 [DBG] Connection id "0HNEEIOPQUSBR", Request id "0HNEEIOPQUSBR:00000003": done reading request body.
+2025-07-30 01:50:44 [DBG] JSON input formatter succeeded, deserializing to type 'KKESH_ROP.DTO.User.LoginDto'
+2025-07-30 01:50:44 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:50:44 [DBG] Done attempting to bind parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:50:44 [DBG] Attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto' ...
+2025-07-30 01:50:44 [DBG] Done attempting to validate the bound parameter 'dto' of type 'KKESH_ROP.DTO.User.LoginDto'.
+2025-07-30 01:50:44 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:50:44 [INF] Executed MQL query
+rop-dev.users.aggregate([?])
+2025-07-30 01:50:44 [DBG] Context 'ApplicationDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:50:44 [DBG] The navigation 'User.Timestamp' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:50:44 [DBG] Context 'ApplicationDbContext' started tracking 'Timestamp' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:50:44 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:50:44 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:50:44 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:50:44 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:50:44 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:50:44 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-07-30 01:50:44 [INF] Executed action KKESH_ROP.Controllers.UserController.Login (KKESH_ROP) in 229.6407ms
+2025-07-30 01:50:44 [INF] Executed endpoint 'KKESH_ROP.Controllers.UserController.Login (KKESH_ROP)'
+2025-07-30 01:50:44 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:50:44 [INF] Request finished HTTP/2 POST https://localhost:7000/api/User/login - 200 null application/json; charset=utf-8 232.7802ms
+2025-07-30 01:50:44 [INF] Request starting HTTP/2 OPTIONS https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - null null
+2025-07-30 01:50:44 [DBG] 1 candidate(s) found for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:50:44 [DBG] Request matched endpoint '405 HTTP Method Not Supported'
+2025-07-30 01:50:44 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-07-30 01:50:44 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:50:44 [INF] CORS policy execution successful.
+2025-07-30 01:50:44 [DBG] The request is a preflight request.
+2025-07-30 01:50:44 [INF] Request finished HTTP/2 OPTIONS https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - 204 null null 0.442ms
+2025-07-30 01:50:44 [INF] Request starting HTTP/2 GET https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - null null
+2025-07-30 01:50:44 [DBG] 1 candidate(s) found for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:50:44 [DBG] Endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)' with route pattern 'api/Physician/user/{userId}' is valid for the request path '/api/physician/user/68894f48fc38b768866ec0ff'
+2025-07-30 01:50:44 [DBG] Request matched endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:50:44 [DBG] Successfully validated the token.
+2025-07-30 01:50:44 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2025-07-30 01:50:44 [DBG] The request has an origin header: 'http://localhost:5173'.
+2025-07-30 01:50:44 [INF] CORS policy execution successful.
+2025-07-30 01:50:44 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-30 01:50:44 [INF] Executing endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:50:44 [INF] Route matched with {action = "GetByUserId", controller = "Physician"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByUserId(System.String) on controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP).
+2025-07-30 01:50:44 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-30 01:50:44 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-30 01:50:44 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-30 01:50:44 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-30 01:50:44 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-30 01:50:44 [DBG] Executing controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:50:44 [DBG] Executed controller factory for controller KKESH_ROP.Controllers.PhysicianController (KKESH_ROP)
+2025-07-30 01:50:44 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2025-07-30 01:50:44 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2025-07-30 01:50:44 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:50:44 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2025-07-30 01:50:44 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2025-07-30 01:50:44 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2025-07-30 01:50:44 [DBG] Entity Framework Core 9.0.4 initialized 'ApplicationDbContext' using provider 'MongoDB.EntityFrameworkCore:9.0.0+9594f3252966facf271459a48f835414b4e840bd' with options: MongoClient=MongoDB.Driver.MongoClient DatabaseName=rop-dev 
+2025-07-30 01:50:44 [INF] Executed MQL query
+rop-dev.Physicians.aggregate([?])
+2025-07-30 01:50:44 [DBG] Context 'ApplicationDbContext' started tracking 'Physician' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-07-30 01:50:44 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-30 01:50:44 [DBG] No information found on request to perform content negotiation.
+2025-07-30 01:50:44 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-30 01:50:44 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-30 01:50:44 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-30 01:50:44 [INF] Executing OkObjectResult, writing value of type 'KKESH_ROP.Helpers.Response`1[[KKESH_ROP.DTO.Physician.PhysicianDto, KKESH_ROP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-30 01:50:44 [INF] Executed action KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP) in 44.5082ms
+2025-07-30 01:50:44 [INF] Executed endpoint 'KKESH_ROP.Controllers.PhysicianController.GetByUserId (KKESH_ROP)'
+2025-07-30 01:50:44 [DBG] 'ApplicationDbContext' disposed.
+2025-07-30 01:50:44 [INF] Request finished HTTP/2 GET https://localhost:7000/api/physician/user/68894f48fc38b768866ec0ff - 200 null application/json; charset=utf-8 47.2561ms
+2025-07-30 01:50:48 [DBG] Connection id "0HNEEIOPQUSBR" received FIN.
+2025-07-30 01:50:48 [DBG] Connection id "0HNEEIOPQUSBR" is closed. The last processed stream ID was 7.
+2025-07-30 01:50:48 [DBG] Connection id "0HNEEIOPQUSBR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-30 01:50:48 [DBG] The connection queue processing loop for 0HNEEIOPQUSBR completed.
+2025-07-30 01:50:48 [DBG] Connection id "0HNEEIOPQUSBR" stopped.

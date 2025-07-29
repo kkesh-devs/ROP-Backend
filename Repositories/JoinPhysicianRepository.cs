@@ -12,13 +12,13 @@ namespace KKESH_ROP.Repositories;
 
 public class JoinPhysicianRepository : IJoinPhysicianRepository
 {
-    private readonly IMongoCollection<JoinPhysician> _joinPhysicianCollection;
+    private readonly IMongoCollection<JoinPhysicianRequests> _joinPhysicianCollection;
     private readonly IMongoCollection<Physician> _physicianCollection;
     private readonly IMapper _mapper;
 
     public JoinPhysicianRepository(IMongoDatabase database, IMapper mapper)
     {
-        _joinPhysicianCollection = database.GetCollection<JoinPhysician>("JoinPhysicians");
+        _joinPhysicianCollection = database.GetCollection<JoinPhysicianRequests>("JoinPhysicianRequests");
         _physicianCollection = database.GetCollection<Physician>("Physicians");
         _mapper = mapper;
     }
@@ -58,7 +58,7 @@ public class JoinPhysicianRepository : IJoinPhysicianRepository
         }
     }
 
-    public async Task<Response<CreateJoinPhysicianResponseDto>> CreateAsync(JoinPhysicianWithUserDto dto)
+    public async Task<Response<CreateJoinPhysicianResponseDto>> CreateAsync(CreateJoinPhysicianRequestDto dto)
     {
         try
         {
@@ -120,7 +120,13 @@ public class JoinPhysicianRepository : IJoinPhysicianRepository
             }
 
             // Create the join request
-            var joinRequest = _mapper.Map<JoinPhysician>(dto);
+            var joinRequest = new JoinPhysicianRequests
+            {
+                UserId = dto.UserId,
+              
+                Status = JoinPhysicianStatus.Pending,
+                CreatedAt = DateTime.UtcNow, 
+            };
             await _joinPhysicianCollection.InsertOneAsync(joinRequest);
 
             // Get the physician record to return in response
@@ -177,8 +183,8 @@ public class JoinPhysicianRepository : IJoinPhysicianRepository
             if (!ObjectId.TryParse(id, out var objectId))
                 return new Response<bool>(false, "Invalid ID format", false);
 
-            var filter = Builders<JoinPhysician>.Filter.Eq(x => x._id, objectId);
-            var update = Builders<JoinPhysician>.Update
+            var filter = Builders<JoinPhysicianRequests>.Filter.Eq(x => x._id, objectId);
+            var update = Builders<JoinPhysicianRequests>.Update
                 .Set(x => x.Status, dto.Status)
                 .Set(x => x.ProcessedAt, DateTime.UtcNow)
                 .Set(x => x.ProcessedBy, dto.ProcessedBy);

@@ -58,7 +58,7 @@ public class JoinPhysicianController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] JoinPhysicianWithUserDto dto)
+    public async Task<IActionResult> Create([FromBody] CreateJoinPhysicianRequestDto dto)
     {
         if (!ModelState.IsValid)
             return BadRequest(new Response<string>(false, "Invalid model", null));

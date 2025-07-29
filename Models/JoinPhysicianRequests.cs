@@ -4,7 +4,7 @@ using KKESH_ROP.Enums;
 
 namespace KKESH_ROP.Models;
 
-public class JoinPhysician
+public class JoinPhysicianRequests
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]

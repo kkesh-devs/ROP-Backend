@@ -1,17 +1,17 @@
 using AutoMapper;
 using KKESH_ROP.DTO.JoinPhysician;
-using KKESH_ROP.Models;
-
 namespace KKESH_ROP.Mappers;
+using KKESH_ROP.Enums;
+using KKESH_ROP.Models;
 
 public class JoinPhysicianProfile : Profile
 {
     public JoinPhysicianProfile()
     {
-        CreateMap<JoinPhysician, JoinPhysicianDto>()
+        CreateMap<JoinPhysicianRequests, JoinPhysicianDto>()
             .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src._id.ToString()));
 
-        CreateMap<CreateJoinPhysicianDto, JoinPhysician>()
+        CreateMap<CreateJoinPhysicianDto, JoinPhysicianRequests>()
             .ForMember(dest => dest._id, opt => opt.Ignore())
             .ForMember(dest => dest.Status, opt => opt.Ignore())
             .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())
@@ -19,10 +19,10 @@ public class JoinPhysicianProfile : Profile
             .ForMember(dest => dest.ProcessedBy, opt => opt.Ignore())
             .ForMember(dest => dest.RejectionReason, opt => opt.Ignore());
 
-        CreateMap<UpdateJoinPhysicianDto, JoinPhysician>()
+        CreateMap<UpdateJoinPhysicianDto, JoinPhysicianRequests>()
             .ForAllMembers(opt => opt.Condition((src, dest, srcMember) => srcMember != null));
 
-        CreateMap<ProcessJoinPhysicianDto, JoinPhysician>()
+        CreateMap<ProcessJoinPhysicianDto, JoinPhysicianRequests>()
             .ForMember(dest => dest._id, opt => opt.Ignore())
             .ForMember(dest => dest.UserId, opt => opt.Ignore())
             .ForMember(dest => dest.CreatedAt, opt => opt.Ignore())

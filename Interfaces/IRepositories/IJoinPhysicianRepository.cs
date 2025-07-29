@@ -8,7 +8,7 @@ public interface IJoinPhysicianRepository
 {
     Task<Response<List<JoinPhysicianDto>>> GetAllAsync();
     Task<Response<JoinPhysicianDto>> GetByIdAsync(string id);
-    Task<Response<CreateJoinPhysicianResponseDto>> CreateAsync(JoinPhysicianWithUserDto dto);
+    Task<Response<CreateJoinPhysicianResponseDto>> CreateAsync(CreateJoinPhysicianRequestDto dto);
     Task<Response<bool>> UpdateAsync(string id, UpdateJoinPhysicianDto dto);
     Task<Response<bool>> ProcessAsync(string id, ProcessJoinPhysicianDto dto);
     Task<Response<List<JoinPhysicianDto>>> GetByStatusAsync(JoinPhysicianStatus status);
