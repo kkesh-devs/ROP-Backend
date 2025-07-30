@@ -26,8 +26,8 @@ public class ProductManager
     [BsonElement("city")]
     public string City { get; set; }
     
-    [BsonElement("hospitalId")]
-    public string HospitalId { get; set; }
+    // [BsonElement("hospitalId")]
+    // public string HospitalId { get; set; }
     
     [BsonElement("userId")]
     public string UserId { get; set; }

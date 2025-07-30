@@ -75,30 +75,30 @@ public class PhysicianController(IPhysicianRepository physicianRepository) : Con
 //     }
 // //____________________________________________________________________________________________________________________________________________________
 
-//     [HttpGet("status/{status}")]
-//     public async Task<IActionResult> GetByStatus(string status)
-//     {
-//         var response = await physicianRepository.GetByStatusAsync(status);
-//         return Ok(response);
-//     }
+    [HttpGet("status/{status}")]
+    public async Task<IActionResult> GetByStatus(string status)
+    {
+        var response = await physicianRepository.GetByStatusAsync(status);
+        return Ok(response);
+    }
 // //____________________________________________________________________________________________________________________________________________________
 
-//     [HttpPut("{id}/approve")]
-//     public async Task<IActionResult> Approve(string id)
-//     {
-//         var response = await physicianRepository.ApproveAsync(id);
-//         if (!response.Success) return NotFound(response);
-//         return Ok(response);
-//     }
+    [HttpPut("{id}/approve")]
+    public async Task<IActionResult> Approve(string id)
+    {
+        var response = await physicianRepository.ApproveAsync(id);
+        if (!response.Success) return NotFound(response);
+        return Ok(response);
+    }
 // //____________________________________________________________________________________________________________________________________________________
 
-//     [HttpPut("{id}/reject")]
-//     public async Task<IActionResult> Reject(string id)
-//     {
-//         var response = await physicianRepository.RejectAsync(id);
-//         if (!response.Success) return NotFound(response);
-//         return Ok(response);
-//     }
+    [HttpPut("{id}/reject")]
+    public async Task<IActionResult> Reject(string id)
+    {
+        var response = await physicianRepository.RejectAsync(id);
+        if (!response.Success) return NotFound(response);
+        return Ok(response);
+    }
 //____________________________________________________________________________________________________________________________________________________
 
 }
