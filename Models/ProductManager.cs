@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using KKESH_ROP.Enums;
 
 namespace KKESH_ROP.Models;
 
@@ -31,4 +32,5 @@ public class ProductManager
     
     [BsonElement("userId")]
     public string UserId { get; set; }
+
 }

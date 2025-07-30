@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using KKESH_ROP.Enums;
 
 namespace KKESH_ROP.Models;
 
@@ -22,4 +23,7 @@ public class MedicalCenter
     
     [BsonElement("userId")]
     public string UserId { get; set; }
+    
+    [BsonElement("status")]
+    public MedicalCenterStatus Status { get; set; } = MedicalCenterStatus.Pending;
 }
