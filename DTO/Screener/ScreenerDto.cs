@@ -1,4 +1,6 @@
-﻿namespace KKESH_ROP.DTO.Screener;
+﻿using KKESH_ROP.Enums;
+
+namespace KKESH_ROP.DTO.Screener;
 
 public class CreateScreenerDto
 {
@@ -10,7 +12,7 @@ public class CreateScreenerDto
     public string City { get; set; }
     public string HospitalId { get; set; }
     public string UserId { get; set; }
-
+    public ScreenerStatusEnum Status { get; set; } = ScreenerStatusEnum.Active;
 }
 
 public class UpdateScreenerDto
@@ -22,6 +24,7 @@ public class UpdateScreenerDto
     public string Country { get; set; }
     public string City { get; set; }
     public string HospitalId { get; set; }
+    public ScreenerStatusEnum Status { get; set; }
 }
 
 public class ScreenerDto
@@ -35,5 +38,5 @@ public class ScreenerDto
     public string City { get; set; }
     public string HospitalId { get; set; }
     public string UserId { get; set; }
-
+    public ScreenerStatusEnum Status { get; set; }
 }

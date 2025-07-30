@@ -9,7 +9,6 @@ public class CreateMedicalCenterDto
     public string Country { get; set; }
     public string City { get; set; }
     public string UserId { get; set; }
-    public MedicalCenterStatus? Status { get; set; }
 }
 
 public class UpdateMedicalCenterDto

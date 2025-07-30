@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using KKESH_ROP.Enums;
 
 namespace KKESH_ROP.Models;
 
@@ -32,4 +33,6 @@ public class Screener
     [BsonElement("userId")]
     public string UserId { get; set; }
     
+    [BsonElement("status")]
+    public ScreenerStatusEnum Status { get; set; } = ScreenerStatusEnum.Active;
 }

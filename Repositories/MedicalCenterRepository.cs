@@ -76,10 +76,13 @@ public class MedicalCenterRepository(IMapper mapper, ApplicationDbContext contex
         try
         {
             var center = mapper.Map<MedicalCenter>(dto);
+            center.Status = MedicalCenterStatus.Pending; // Set default status
             await context.MedicalCenters.AddAsync(center);
             await context.SaveChangesAsync();
 
             var result = mapper.Map<MedicalCenterDto>(center);
+
+            
             return new Response<MedicalCenterDto>(true, "Medical center created successfully", result);
         }
         catch (Exception exception)
