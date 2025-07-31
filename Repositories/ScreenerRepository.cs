@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using KKESH_ROP.Data;
 using KKESH_ROP.DTO.Screener;
+using KKESH_ROP.DTO.User;
 using KKESH_ROP.Enums;
 using KKESH_ROP.Helpers;
 using KKESH_ROP.Interfaces.IRepositories;
@@ -9,10 +10,10 @@ using MongoDB.Bson;
 
 namespace KKESH_ROP.Repositories;
 
-public class ScreenerRepository(IMapper mapper, ApplicationDbContext context) : IScreenerRepository
+public class ScreenerRepository(IMapper mapper, ApplicationDbContext context, IUserRepository userRepository) : IScreenerRepository
 {
 
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     public async Task<Response<List<ScreenerDto>>> GetAllAsync()
     {
@@ -27,7 +28,7 @@ public class ScreenerRepository(IMapper mapper, ApplicationDbContext context) : 
             return new Response<List<ScreenerDto>>(false, "Error " + exception.Message, null);
         }
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     public async Task<Response<ScreenerDto>> GetByIdAsync(string id)
     {
@@ -48,13 +49,29 @@ public class ScreenerRepository(IMapper mapper, ApplicationDbContext context) : 
             return new Response<ScreenerDto>(false, "Error " + exception.Message, null);
         }
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     public async Task<Response<ScreenerDto>> CreateAsync(CreateScreenerDto dto)
     {
         try
         {
+            // First create user account
+            var createUserDto = new CreateUserDto
+            {
+                CreatedBy = dto.UserId,
+                Email = dto.Email,
+                Password = dto.Password,
+                Role = UserRoleEnum.Screener
+            };
+
+            var userResponse = await userRepository.CreateAsync(createUserDto);
+            if (!userResponse.Success)
+                return new Response<ScreenerDto>(false, $"Failed to create user: {userResponse.Message}", null);
+
+            // Then create screener record
             var screener = mapper.Map<Screener>(dto);
+            screener.UserId = userResponse.Data.Id; // Use the created user's ID
+
             await context.Screeners.AddAsync(screener);
             await context.SaveChangesAsync();
 
@@ -66,7 +83,7 @@ public class ScreenerRepository(IMapper mapper, ApplicationDbContext context) : 
             return new Response<ScreenerDto>(false, "Error " + exception.Message, null);
         }
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     public async Task<Response<bool>> UpdateAsync(string id, UpdateScreenerDto dto)
     {
@@ -90,7 +107,7 @@ public class ScreenerRepository(IMapper mapper, ApplicationDbContext context) : 
             return new Response<bool>(false, "Error " + exception.Message, false);
         }
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     public async Task<Response<bool>> UpdateStatusAsync(string id, ScreenerStatusEnum status)
     {
@@ -115,7 +132,7 @@ public class ScreenerRepository(IMapper mapper, ApplicationDbContext context) : 
             return new Response<bool>(false, "Error " + exception.Message, false);
         }
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     public async Task<Response<List<ScreenerDto>>> GetByStatusAsync(ScreenerStatusEnum status)
     {
@@ -130,7 +147,7 @@ public class ScreenerRepository(IMapper mapper, ApplicationDbContext context) : 
             return new Response<List<ScreenerDto>>(false, "Error " + exception.Message, null);
         }
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     public async Task<Response<ScreenerDto>> GetByUserIdAsync(string userId)
     {
@@ -148,6 +165,6 @@ public class ScreenerRepository(IMapper mapper, ApplicationDbContext context) : 
             return new Response<ScreenerDto>(false, "Error " + exception.Message, null);
         }
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
 }

@@ -33,6 +33,12 @@ public class Screener
     [BsonElement("userId")]
     public string UserId { get; set; }
     
+    [BsonElement("email")]
+    public string Email { get; set; }
+    
+    [BsonElement("password")]
+    public string Password { get; set; }
+    
     [BsonElement("status")]
     public ScreenerStatusEnum Status { get; set; } = ScreenerStatusEnum.Active;
 }
