@@ -223,7 +223,7 @@ public class MedicalCenterRepository(IMapper mapper, ApplicationDbContext contex
             if (center == null)
                 return new Response<bool>(false, "Medical center not found", false);
 
-            center.Status = MedicalCenterStatus.Active;
+            center.Status = MedicalCenterStatus.Approved;
             context.MedicalCenters.Update(center);
             await context.SaveChangesAsync();
 

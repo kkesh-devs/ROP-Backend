@@ -1,6 +1,6 @@
 namespace KKESH_ROP.Enums;
 
-public enum MedicalCenterStatus
+public enum JoinMedicalCenterStatus
 {
     Pending = 0,
     Integration = 1,
