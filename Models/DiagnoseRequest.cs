@@ -36,6 +36,12 @@ public class DiagnoseRequest
     [BsonElement("updatedBy")]
     public string UpdatedBy { get; set; }
 
+    [BsonElement("parentId")]
+    public string ParentId { get; set; } // Can be null for initial requests
+
+    [BsonElement("hospitalId")]
+    public string HospitalId { get; set; }
+
     [BsonElement("timestamp")]
     public Timestamp Timestamp { get; set; }
 }

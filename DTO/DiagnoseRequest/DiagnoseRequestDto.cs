@@ -11,9 +11,8 @@ public class CreateDiagnoseRequestDto
     public string AssignedTo { get; set; }
     public string SecondOpinionDrId { get; set; }
     public string CreatedBy { get; set; }
+    public string ParentId { get; set; } // Can be null for initial requests
 }
-
-
 
 public class DiagnoseRequestDto
 {
@@ -27,5 +26,6 @@ public class DiagnoseRequestDto
     public string SecondOpinionDrId { get; set; }
     public string CreatedBy { get; set; }
     public string UpdatedBy { get; set; }
+    public string ParentId { get; set; } // Can be null for initial requests
     public Timestamp Timestamp { get; set; }
 }

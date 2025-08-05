@@ -31739,3 +31739,68 @@ rop-dev.Physicians.aggregate([?])
 2025-08-05 15:34:54 [DBG] Connection id "0HNEK2ECQ62SG" sending FIN because: "The Socket transport's send loop completed gracefully."
 2025-08-05 15:34:54 [DBG] The connection queue processing loop for 0HNEK2ECQ62SG completed.
 2025-08-05 15:34:54 [DBG] Connection id "0HNEK2ECQ62SG" stopped.
+2025-08-05 16:17:56 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-08-05 16:17:56 [DBG] Hosting starting
+2025-08-05 16:17:56 [INF] User profile is available. Using '/Users/macair/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-08-05 16:17:56 [DBG] Reading data from file '/Users/macair/.aspnet/DataProtection-Keys/key-a8906ff2-533a-4e96-950b-b717ca7f545c.xml'.
+2025-08-05 16:17:56 [DBG] Found key {a8906ff2-533a-4e96-950b-b717ca7f545c}.
+2025-08-05 16:17:56 [DBG] Considering key {a8906ff2-533a-4e96-950b-b717ca7f545c} with expiration date 2025-09-24 02:42:53Z as default key.
+2025-08-05 16:17:56 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-08-05 16:17:56 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2025-08-05 16:17:56 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2025-08-05 16:17:56 [DBG] Using key {a8906ff2-533a-4e96-950b-b717ca7f545c} as the default key.
+2025-08-05 16:17:56 [DBG] Key ring with default key {a8906ff2-533a-4e96-950b-b717ca7f545c} was loaded during application startup.
+2025-08-05 16:17:56 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-08-05 16:17:56 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-08-05 16:17:56 [INF] Now listening on: https://localhost:7000
+2025-08-05 16:17:56 [INF] Now listening on: http://localhost:5000
+2025-08-05 16:17:56 [DBG] Loaded hosting startup assembly KKESH_ROP
+2025-08-05 16:17:56 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-05 16:17:56 [INF] Hosting environment: Development
+2025-08-05 16:17:56 [INF] Content root path: /Users/macair/Documents/ROP-Backend
+2025-08-05 16:17:56 [DBG] Hosting started
+2025-08-05 16:18:08 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-08-05 16:18:08 [DBG] Hosting starting
+2025-08-05 16:18:08 [INF] User profile is available. Using '/Users/macair/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-08-05 16:18:08 [DBG] Reading data from file '/Users/macair/.aspnet/DataProtection-Keys/key-a8906ff2-533a-4e96-950b-b717ca7f545c.xml'.
+2025-08-05 16:18:08 [DBG] Found key {a8906ff2-533a-4e96-950b-b717ca7f545c}.
+2025-08-05 16:18:08 [DBG] Considering key {a8906ff2-533a-4e96-950b-b717ca7f545c} with expiration date 2025-09-24 02:42:53Z as default key.
+2025-08-05 16:18:08 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=9.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-08-05 16:18:08 [DBG] Using managed symmetric algorithm 'System.Security.Cryptography.Aes'.
+2025-08-05 16:18:08 [DBG] Using managed keyed hash algorithm 'System.Security.Cryptography.HMACSHA256'.
+2025-08-05 16:18:08 [DBG] Using key {a8906ff2-533a-4e96-950b-b717ca7f545c} as the default key.
+2025-08-05 16:18:08 [DBG] Key ring with default key {a8906ff2-533a-4e96-950b-b717ca7f545c} was loaded during application startup.
+2025-08-05 16:18:08 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2025-08-05 16:18:08 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-08-05 16:18:08 [INF] Now listening on: https://localhost:7000
+2025-08-05 16:18:08 [INF] Now listening on: http://localhost:5000
+2025-08-05 16:18:08 [DBG] Loaded hosting startup assembly KKESH_ROP
+2025-08-05 16:18:08 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-05 16:18:08 [INF] Hosting environment: Development
+2025-08-05 16:18:08 [INF] Content root path: /Users/macair/Documents/ROP-Backend
+2025-08-05 16:18:08 [DBG] Hosting started
+2025-08-05 16:18:11 [DBG] Connection id "0HNEK4A3G9SOT" accepted.
+2025-08-05 16:18:11 [DBG] Connection id "0HNEK4A3G9SOT" started.
+2025-08-05 16:18:11 [DBG] Connection 0HNEK4A3G9SOT established using the following protocol: "Tls12"
+2025-08-05 16:18:11 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/index.html - null null
+2025-08-05 16:18:11 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-08-05 16:18:11 [DBG] Request did not match any endpoints
+2025-08-05 16:18:11 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-08-05 16:18:11 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/index.html - 200 null text/html;charset=utf-8 83.8784ms
+2025-08-05 16:18:11 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/index.js - null null
+2025-08-05 16:18:11 [DBG] No candidates found for the request path '/swagger/index.js'
+2025-08-05 16:18:11 [DBG] Request did not match any endpoints
+2025-08-05 16:18:11 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-08-05 16:18:11 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/index.js - 200 null application/javascript;charset=utf-8 30.938ms
+2025-08-05 16:18:12 [INF] Request starting HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - null null
+2025-08-05 16:18:12 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-08-05 16:18:12 [DBG] Request did not match any endpoints
+2025-08-05 16:18:12 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2025-08-05 16:18:12 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-05 16:18:12 [DBG] Executing API description provider 'DefaultApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v9.0.0.0.
+2025-08-05 16:18:12 [INF] Request finished HTTP/2 GET https://localhost:7000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 120.023ms
+2025-08-05 16:18:15 [DBG] Connection id "0HNEK4A3G9SOT" received FIN.
+2025-08-05 16:18:15 [DBG] Connection id "0HNEK4A3G9SOT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-08-05 16:18:15 [DBG] Connection id "0HNEK4A3G9SOT" is closed. The last processed stream ID was 5.
+2025-08-05 16:18:15 [DBG] The connection queue processing loop for 0HNEK4A3G9SOT completed.
+2025-08-05 16:18:15 [DBG] Connection id "0HNEK4A3G9SOT" stopped.

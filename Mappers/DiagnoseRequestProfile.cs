@@ -19,6 +19,7 @@ public class DiagnoseRequestProfile :  Profile
             {
                 CreatedAt = DateTime.UtcNow,
             }))
-            .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore());
+            .ForMember(dest => dest.UpdatedBy, opt => opt.Ignore())
+            .ForMember(dest => dest.ParentId, opt => opt.MapFrom(src => src.ParentId));
     }
 }
