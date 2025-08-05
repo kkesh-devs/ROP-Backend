@@ -41,4 +41,7 @@ public class Screener
     
     [BsonElement("status")]
     public ScreenerStatusEnum Status { get; set; } = ScreenerStatusEnum.Active;
+    
+    [BsonElement("isTrained")]
+    public bool IsTrained { get; set; } = false;
 }

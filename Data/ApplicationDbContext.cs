@@ -17,6 +17,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<DiagnoseRequest> DiagnoseRequests { get; set; }
 
     public DbSet<JoinPhysicianRequests> PhysicianJoinRequests { get; set; }
+    public DbSet<JoinMedicalCenterRequests> JoinMedicalCenterRequests { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -31,6 +32,7 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
         builder.Entity<Diagnose>().ToCollection("diagnoses");
         builder.Entity<DiagnoseRequest>().ToCollection("diagnoseRequests");
         builder.Entity<JoinPhysicianRequests>().ToCollection("JoinPhysicianRequests");
+        builder.Entity<JoinMedicalCenterRequests>().ToCollection("JoinMedicalCenterRequests");
 
 
     }

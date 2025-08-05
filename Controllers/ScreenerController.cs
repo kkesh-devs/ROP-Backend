@@ -91,4 +91,21 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
     }
 //____________________________________________________________________________________________________________________________________________________
 
+    [HttpPatch("{id}/set-trained")]
+    public async Task<IActionResult> SetAsTrained(string id)
+    {
+        var response = await screenerRepository.SetAsTrainedAsync(id);
+        if (!response.Success) return NotFound(response);
+        return Ok(response);
+    }
+//____________________________________________________________________________________________________________________________________________________
+
+    [HttpGet("hospital/{hospitalId}")]
+    public async Task<IActionResult> GetByHospitalId(string hospitalId)
+    {
+        var response = await screenerRepository.GetByHospitalIdAsync(hospitalId);
+        return Ok(response);
+    }
+//____________________________________________________________________________________________________________________________________________________
+
 }

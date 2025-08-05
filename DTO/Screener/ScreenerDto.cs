@@ -15,6 +15,7 @@ public class CreateScreenerDto
     public string Email { get; set; }
     public string Password { get; set; }
     public ScreenerStatusEnum Status { get; set; } = ScreenerStatusEnum.Active;
+    public bool IsTrained { get; set; } = false;
 }
 
 public class UpdateScreenerDto
@@ -28,6 +29,7 @@ public class UpdateScreenerDto
     public string HospitalId { get; set; }
     public string Email { get; set; }
     public ScreenerStatusEnum Status { get; set; }
+    public bool IsTrained { get; set; }
 }
 
 public class ScreenerDto
@@ -43,4 +45,5 @@ public class ScreenerDto
     public string UserId { get; set; }
     public string Email { get; set; }
     public ScreenerStatusEnum Status { get; set; }
+    public bool IsTrained { get; set; }
 }

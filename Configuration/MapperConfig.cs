@@ -19,6 +19,8 @@ public static class MapperConfig
             cfg.AddProfile<DiagnoseProfile>();
             cfg.AddProfile<DiagnoseRequestProfile>();
             cfg.AddProfile<JoinPhysicianProfile>();
+                        cfg.AddProfile<JoinPhysicianProfile>();
+
 
         });
     }

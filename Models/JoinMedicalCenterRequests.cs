@@ -12,6 +12,8 @@ public class JoinMedicalCenterRequests
     
     [BsonElement("userId")]
     public string UserId { get; set; }
+    [BsonElement("medicalCenterId")]
+    public string MedicalCenterId { get; set; }
     
     [BsonElement("status")]
     public JoinMedicalCenterStatus Status { get; set; } = JoinMedicalCenterStatus.Pending;

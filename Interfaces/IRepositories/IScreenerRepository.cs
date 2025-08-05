@@ -13,4 +13,6 @@ public interface IScreenerRepository
     Task<Response<bool>> UpdateStatusAsync(string id, ScreenerStatusEnum status);
     Task<Response<List<ScreenerDto>>> GetByStatusAsync(ScreenerStatusEnum status);
     Task<Response<ScreenerDto>> GetByUserIdAsync(string userId);
+    Task<Response<bool>> SetAsTrainedAsync(string id);
+    Task<Response<List<ScreenerDto>>> GetByHospitalIdAsync(string hospitalId);
 }

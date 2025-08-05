@@ -10,7 +10,7 @@ public static class ServicesConfig
 {
     public static void AddServices(this IServiceCollection services)
     {
-        
+
         //Repositories
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IPatientRepository, PatientRepository>();
@@ -24,11 +24,13 @@ public static class ServicesConfig
         services.AddScoped<IDiagnoseRequestRepository, DiagnoseRequestRepository>();
         services.AddScoped<IJoinPhysicianRepository, JoinPhysicianRepository>();
 
-        
+        // Register repositories
+        services.AddScoped<IJoinMedicalCenterRepository, JoinMedicalCenterRepository>();
+
         //Services
         services.AddScoped<ITapPaymentService, TapPaymentService>();
-        
-        
+
+
         services.AddScoped<TokenHelper>();
     }
 }

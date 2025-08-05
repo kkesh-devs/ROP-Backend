@@ -24,9 +24,6 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddAuthorization();
 builder.Services.AddMappers();
-
-
-
 builder.Host.AddLoggingConfiguration();
 
 

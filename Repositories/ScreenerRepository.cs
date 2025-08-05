@@ -7,6 +7,7 @@ using KKESH_ROP.Helpers;
 using KKESH_ROP.Interfaces.IRepositories;
 using KKESH_ROP.Models;
 using MongoDB.Bson;
+using Microsoft.EntityFrameworkCore;
 
 namespace KKESH_ROP.Repositories;
 
@@ -163,6 +164,45 @@ public class ScreenerRepository(IMapper mapper, ApplicationDbContext context, IU
         catch (Exception exception)
         {
             return new Response<ScreenerDto>(false, "Error " + exception.Message, null);
+        }
+    }
+    //____________________________________________________________________________________________________________________________________________________
+
+    public async Task<Response<bool>> SetAsTrainedAsync(string id)
+    {
+        try
+        {
+            if (!ObjectId.TryParse(id, out var objectId))
+                return new Response<bool>(false, "Invalid ID format", false);
+
+            var screener = await context.Screeners.FirstOrDefaultAsync(x => x._id == objectId);
+            if (screener == null)
+                return new Response<bool>(false, "Screener not found", false);
+
+            screener.IsTrained = true;
+            context.Screeners.Update(screener);
+            await context.SaveChangesAsync();
+
+            return new Response<bool>(true, "Screener marked as trained successfully", true);
+        }
+        catch (Exception exception)
+        {
+            return new Response<bool>(false, "Error " + exception.Message, false);
+        }
+    }
+    //____________________________________________________________________________________________________________________________________________________
+
+    public async Task<Response<List<ScreenerDto>>> GetByHospitalIdAsync(string hospitalId)
+    {
+        try
+        {
+            var screeners = await context.Screeners.Where(x => x.HospitalId == hospitalId).ToListAsync();
+            var result = mapper.Map<List<ScreenerDto>>(screeners);
+            return new Response<List<ScreenerDto>>(true, "Screeners retrieved successfully", result);
+        }
+        catch (Exception exception)
+        {
+            return new Response<List<ScreenerDto>>(false, "Error " + exception.Message, null);
         }
     }
     //____________________________________________________________________________________________________________________________________________________
