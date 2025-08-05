@@ -10,7 +10,7 @@ namespace KKESH_ROP.Controllers;
 public class ScreenerController(IScreenerRepository screenerRepository) : ControllerBase
 {
 
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpGet]
     public async Task<IActionResult> GetAll()
@@ -18,7 +18,7 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         var response = await screenerRepository.GetAllAsync();
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(string id)
@@ -27,7 +27,7 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         if (!response.Success) return NotFound(response);
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateScreenerDto dto)
@@ -36,7 +36,7 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         if (!response.Success) return BadRequest(response);
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(string id, [FromBody] UpdateScreenerDto dto)
@@ -45,7 +45,7 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         if (!response.Success) return NotFound(response);
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpPatch("{id}/status")]
     public async Task<IActionResult> UpdateStatus(string id, [FromBody] UpdateScreenerStatusDto dto)
@@ -54,7 +54,7 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         if (!response.Success) return NotFound(response);
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpPatch("{id}/status/active")]
     public async Task<IActionResult> SetStatusActive(string id)
@@ -63,7 +63,7 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         if (!response.Success) return NotFound(response);
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpPatch("{id}/status/inactive")]
     public async Task<IActionResult> SetStatusInactive(string id)
@@ -72,7 +72,7 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         if (!response.Success) return NotFound(response);
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpGet("status/{status}")]
     public async Task<IActionResult> GetByStatus(ScreenerStatusEnum status)
@@ -80,7 +80,7 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         var response = await screenerRepository.GetByStatusAsync(status);
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpGet("user/{userId}")]
     public async Task<IActionResult> GetByUserId(string userId)
@@ -89,7 +89,7 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         if (!response.Success) return NotFound(response);
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpPatch("{id}/set-trained")]
     public async Task<IActionResult> SetAsTrained(string id)
@@ -98,7 +98,7 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         if (!response.Success) return NotFound(response);
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
     [HttpGet("hospital/{hospitalId}")]
     public async Task<IActionResult> GetByHospitalId(string hospitalId)
@@ -106,6 +106,6 @@ public class ScreenerController(IScreenerRepository screenerRepository) : Contro
         var response = await screenerRepository.GetByHospitalIdAsync(hospitalId);
         return Ok(response);
     }
-//____________________________________________________________________________________________________________________________________________________
+    //____________________________________________________________________________________________________________________________________________________
 
 }

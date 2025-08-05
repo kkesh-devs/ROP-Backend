@@ -13,11 +13,13 @@ public class ScreenerProfile : Profile
             .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src._id.ToString()));
             
         CreateMap<CreateScreenerDto, Screener>()
-            .ForMember(dest => dest._id, opt => opt.MapFrom(src => ObjectId.GenerateNewId()));
+            .ForMember(dest => dest._id, opt => opt.MapFrom(src => ObjectId.GenerateNewId()))
+            .ForMember(dest => dest.IsTrained, opt => opt.MapFrom(src => false));
             
         CreateMap<UpdateScreenerDto, Screener>()
             .ForMember(dest => dest._id, opt => opt.Ignore())
             .ForMember(dest => dest.UserId, opt => opt.Ignore())
-            .ForMember(dest => dest.Password, opt => opt.Ignore());
+            .ForMember(dest => dest.Password, opt => opt.Ignore())
+            .ForMember(dest => dest.IsTrained, opt => opt.Ignore());
     }
 }
