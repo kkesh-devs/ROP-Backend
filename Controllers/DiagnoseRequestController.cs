@@ -76,6 +76,17 @@ public class DiagnoseRequestController(IDiagnoseRequestRepository diagnoseReques
     }
 //____________________________________________________________________________________________________________________________________________________
 
+    [HttpPut("{id}/assign-and-start")]
+    public async Task<IActionResult> AssignAndSetInProgress(string id, [FromBody] SetInProgressDto dto)
+    {
+        if (!ModelState.IsValid || string.IsNullOrEmpty(dto.AssignedTo))
+            return BadRequest(new Response<string>(false, "AssignedTo is required", null));
+
+        var response = await diagnoseRequestRepository.SetStatusInProgressWithAssignment(id, dto.AssignedTo);
+        return Ok(response);
+    }
+//____________________________________________________________________________________________________________________________________________________
+
     [HttpPut("{id}/status/not-possible")]
     public async Task<IActionResult> SetStatusNotPossible(string id)
     {
