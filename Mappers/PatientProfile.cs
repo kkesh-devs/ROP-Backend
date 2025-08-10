@@ -12,6 +12,7 @@ public class PatientProfile :  Profile
         CreateMap<CreatePatientDto, Patient>()
             .ForMember(dest => dest._id, opt => opt.Ignore())
             .ForMember(dest => dest.UpdateBy, opt => opt.Ignore())
+            .ForMember(dest => dest.Mobile, opt => opt.MapFrom(src => src.Mobile))
             .ForMember(dest => dest.Timestamp, opt => opt.MapFrom(_ => new Timestamp
             {
                 CreatedAt = DateTime.UtcNow
@@ -20,6 +21,7 @@ public class PatientProfile :  Profile
         // Model → Retrieve DTO
         CreateMap<Patient, RetrievePatientDto>()
             .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src._id.ToString()))
+            .ForMember(dest => dest.Mobile, opt => opt.MapFrom(src => src.Mobile))
             .ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.Timestamp.CreatedAt))
             .ForMember(dest => dest.UpdatedAt, opt => opt.MapFrom(src => src.Timestamp.UpdatedAt))
             .ForMember(dest => dest.CreatedBy, opt => opt.MapFrom(src => src.CreatedBy.ToString()))
@@ -29,6 +31,7 @@ public class PatientProfile :  Profile
         CreateMap<UpdatePatientDto, Patient>()
             .ForMember(dest => dest._id, opt => opt.Ignore())
             .ForMember(dest => dest.CreatedBy, opt => opt.Ignore())
+            .ForMember(dest => dest.Mobile, opt => opt.Condition((src, dest, srcMember) => srcMember != null))
             .ForMember(dest => dest.Timestamp, opt => opt.MapFrom(_ => new Timestamp
             {
                 UpdatedAt = DateTime.UtcNow
