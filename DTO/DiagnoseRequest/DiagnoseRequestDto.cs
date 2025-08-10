@@ -29,3 +29,8 @@ public class DiagnoseRequestDto
     public string ParentId { get; set; } // Can be null for initial requests
     public Timestamp Timestamp { get; set; }
 }
+
+public class SetInProgressDto
+{
+    public string AssignedTo { get; set; }
+}

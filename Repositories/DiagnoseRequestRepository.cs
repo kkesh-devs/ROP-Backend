@@ -126,6 +126,39 @@ public class DiagnoseRequestRepository : IDiagnoseRequestRepository
     public async Task<Response<string>> SetStatusInProgress(string id) => 
         await UpdateRequestStatus(id, DiagnoseReqStatusEnum.InProgress);
 
+    public async Task<Response<string>> SetStatusInProgressWithAssignment(string id, string assignedTo)
+    {
+        try
+        {
+            if (!ObjectId.TryParse(id, out var objectId))
+                return new Response<string>(false, "Invalid ID format", null);
+
+            // Check if request exists and is in New status
+            var existingRequest = await _diagnoseRequests.Find(x => x._id == objectId).FirstOrDefaultAsync();
+            if (existingRequest == null)
+                return new Response<string>(false, "Request not found", null);
+
+            if (existingRequest.Status != DiagnoseReqStatusEnum.New)
+                return new Response<string>(false, "Request must be in 'New' status to assign and set to InProgress", null);
+
+            var update = Builders<DiagnoseRequest>.Update
+                .Set(x => x.Status, DiagnoseReqStatusEnum.InProgress)
+                .Set(x => x.AssignedTo, assignedTo)
+                .Set(x => x.Timestamp.UpdatedAt, DateTime.UtcNow);
+
+            var result = await _diagnoseRequests.UpdateOneAsync(x => x._id == objectId, update);
+
+            if (result.MatchedCount == 0)
+                return new Response<string>(false, "Request not found", null);
+
+            return new Response<string>(true, "Request assigned and set to InProgress successfully", id);
+        }
+        catch (Exception ex)
+        {
+            return new Response<string>(false, ex.Message, null);
+        }
+    }
+
     public async Task<Response<string>> SetStatusNotPossible(string id) => 
         await UpdateRequestStatus(id, DiagnoseReqStatusEnum.NotPossible);
 

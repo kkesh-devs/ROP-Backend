@@ -23,4 +23,5 @@ public interface IDiagnoseRequestRepository
     Task<Response<string>> SetStatusCompleted(string id);
     Task<Response<string>> SetStatusNeglected(string id);
     Task<Response<string>> SetStatusCancelled(string id);
+    Task<Response<string>> SetStatusInProgressWithAssignment(string id, string assignedTo);
 }
