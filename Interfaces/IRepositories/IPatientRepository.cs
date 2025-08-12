@@ -9,4 +9,5 @@ public interface IPatientRepository
     Task<Response<RetrievePatientDto>> GetByIdAsync(string id);
     Task<Response<RetrievePatientDto>> CreateAsync(CreatePatientDto dto);
     Task<Response<bool>> UpdateAsync(string id, UpdatePatientDto dto);
+    Task<Response<List<RetrievePatientDto>>> GetByHospitalIdAsync(string hospitalId);
 }

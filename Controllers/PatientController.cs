@@ -29,6 +29,15 @@ public class PatientController(IPatientRepository patientRepository) : Controlle
     }
 //____________________________________________________________________________________________________________________________________________________
 
+    [HttpGet("hospital/{hospitalId}")]
+    public async Task<IActionResult> GetByHospitalId(string hospitalId)
+    {
+        var response = await patientRepository.GetByHospitalIdAsync(hospitalId);
+        if (!response.Success) return BadRequest(response);
+        return Ok(response);
+    }
+//____________________________________________________________________________________________________________________________________________________
+
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreatePatientDto dto)
     {

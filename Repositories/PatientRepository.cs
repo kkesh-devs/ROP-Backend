@@ -5,6 +5,8 @@ using KKESH_ROP.Helpers;
 using KKESH_ROP.Interfaces.IRepositories;
 using KKESH_ROP.Models;
 using MongoDB.Bson;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace KKESH_ROP.Repositories;
 
@@ -93,5 +95,25 @@ public class PatientRepository(IMapper mapper, ApplicationDbContext context) : I
         }
     }
 //____________________________________________________________________________________________________________________________________________________
+
+    public async Task<Response<List<RetrievePatientDto>>> GetByHospitalIdAsync(string hospitalId)
+    {
+        try
+        {
+            if (string.IsNullOrWhiteSpace(hospitalId))
+                return new Response<List<RetrievePatientDto>>(false, "Invalid hospitalId", null);
+
+            var patients = await context.Patients
+                .Where(p => p.HospitalId == hospitalId)
+                .ToListAsync();
+
+            var result = mapper.Map<List<RetrievePatientDto>>(patients);
+            return new Response<List<RetrievePatientDto>>(true, "Data retrieved successfully", result);
+        }
+        catch (Exception exception)
+        {
+            return new Response<List<RetrievePatientDto>>(false, "Error " + exception.Message, null);
+        }
+    }
 
 }
