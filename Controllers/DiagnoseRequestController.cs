@@ -1,4 +1,5 @@
 ﻿using KKESH_ROP.DTO.DiagnoseRequest;
+using KKESH_ROP.DTO.Diagnose;
 using KKESH_ROP.Enums;
 using KKESH_ROP.Helpers;
 using KKESH_ROP.Interfaces.IRepositories;
@@ -47,12 +48,12 @@ public class DiagnoseRequestController(IDiagnoseRequestRepository diagnoseReques
 //____________________________________________________________________________________________________________________________________________________
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] CreateDiagnoseRequestDto dto)
+    public async Task<IActionResult> Create([FromBody] CreateDiagnoseRequestWithDiagnoseDto dto)
     {
         if (!ModelState.IsValid)
             return BadRequest(new Response<string>(false, "Invalid model", null));
 
-        var response = await diagnoseRequestRepository.CreateAsync(dto);
+        var response = await diagnoseRequestRepository.CreateWithDiagnoseAsync(dto.DiagnoseRequest, dto.Diagnose);
         return Ok(response);
     }
 //____________________________________________________________________________________________________________________________________________________

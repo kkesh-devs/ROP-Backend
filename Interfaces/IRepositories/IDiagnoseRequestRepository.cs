@@ -1,4 +1,5 @@
 ﻿using KKESH_ROP.DTO.DiagnoseRequest;
+using KKESH_ROP.DTO.Diagnose;
 using KKESH_ROP.Enums;
 using KKESH_ROP.Helpers;
 
@@ -9,6 +10,7 @@ public interface IDiagnoseRequestRepository
     Task<Response<List<DiagnoseRequestDto>>> GetAllAsync();
     Task<Response<DiagnoseRequestDto>> GetByIdAsync(string id);
     Task<Response<DiagnoseRequestDto>> CreateAsync(CreateDiagnoseRequestDto dto);
+    Task<Response<DiagnoseRequestDto>> CreateWithDiagnoseAsync(CreateDiagnoseRequestDto requestDto, CreateDiagnoseDto diagnoseDto);
     Task<Response<string>> UpdateRequestStatus(string id, DiagnoseReqStatusEnum status);
     Task<Response<List<DiagnoseRequestDto>>> GetChildrenByParentIdAsync(string parentId);
     Task<Response<List<DiagnoseRequestDto>>> GetByHospitalIdAsync(string hospitalId);

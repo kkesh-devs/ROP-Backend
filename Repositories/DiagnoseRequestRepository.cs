@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using KKESH_ROP.DTO.Diagnose;
 using KKESH_ROP.DTO.DiagnoseRequest;
 using KKESH_ROP.Enums;
 using KKESH_ROP.Helpers;
@@ -182,4 +183,9 @@ public class DiagnoseRequestRepository : IDiagnoseRequestRepository
 
     public async Task<Response<string>> SetStatusCancelled(string id) => 
         await UpdateRequestStatus(id, DiagnoseReqStatusEnum.Cancelled);
+
+    public Task<Response<DiagnoseRequestDto>> CreateWithDiagnoseAsync(CreateDiagnoseRequestDto requestDto, CreateDiagnoseDto diagnoseDto)
+    {
+        throw new NotImplementedException();
+    }
 }
